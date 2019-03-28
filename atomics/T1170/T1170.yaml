@@ -16,4 +16,4 @@ atomic_tests:
   executor:
     name: powershell
     command: |
-      mshta.exe javascript:a=(GetObject('script:#{file_path}')).Exec();close();
+      cmd.exe  /c "mshta.exe javascript:a=(GetObject('script:#{file_path}')).Exec();close();"
