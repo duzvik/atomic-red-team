@@ -14,6 +14,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      sc config Fax binPath= "C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe -noexit -c \"write-host 'T1031 Test'\""
-      sc start Fax
-      sc config Fax binPath= "C:\WINDOWS\system32\fxssvc.exe"
+      sc stop Spooler
+      sc config Spooler binPath= "calc.exe"
+      sc start Spooler
+      sc config Spooler binPath= "C:\Windows\System32\spoolsv.exe"

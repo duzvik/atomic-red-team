@@ -127,8 +127,10 @@ atomic_tests:
     output_folder:
       description: Path where resulting dump should be placed
       type: Path
-      default: C:\Atomic_Red_Team
+      default: C:\AtomicRedTeam
   executor:
     name: command_prompt
     command: |
-      ntdsutil “ac i ntds” “ifm” “create full #{output_folder} q q
+      ntdsutil "ac i ntds" "ifm" "create full #{output_folder}" q q
+
+

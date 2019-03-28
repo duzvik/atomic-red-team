@@ -5,18 +5,18 @@ display_name: Data Compressed
 atomic_tests:
 - name: Compress Data for Exfiltration With PowerShell
   description: |
-    An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration 
+    An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration
   supported_platforms:
     - windows
   input_arguments:
     input_file:
       description: Path that should be compressed into our output file
       type: Path
-      default: C:\*
+      default: C:\AtomicRedTeam\atomics\*
     output_file:
       description: Path where resulting compressed data should be placed
       type: Path
-      default: C:\test\Data.zip
+      default: C:\Data.zip
   executor:
     name: powershell
     command: |
@@ -24,7 +24,7 @@ atomic_tests:
 
 - name: Compress Data for Exfiltration With Rar
   description: |
-    An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration 
+    An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration
   supported_platforms:
     - windows
   input_arguments:
