@@ -43,4 +43,4 @@ atomic_tests:
   executor:
    name: command_prompt
    command: |
-    "IF "%PROCESSOR_ARCHITECTURE%"=="AMD64" (C:\Windows\syswow64\regsvr32.exe /s #{dll_name}) ELSE ( regsvr32.exe /s #{dll_name} )"
+    "regsvr32.exe /s #{dll_name}"
