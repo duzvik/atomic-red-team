@@ -4,6 +4,8 @@ display_name: Install Root Certificate
 
 atomic_tests:
 - name: Install root CA on CentOS/RHEL
+  uuid: 758205fb-57e5-4a00-8439-f3f758c502f5
+
   description: |
     Creates a root CA with openssl
   supported_platforms:

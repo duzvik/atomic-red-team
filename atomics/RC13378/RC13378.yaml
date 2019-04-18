@@ -4,6 +4,8 @@ display_name: Systemd Service Creation
 
 atomic_tests:
 - name: Create Systemd Service
+  uuid: 5c6a4cd5-7044-4ebf-8046-6623b1ec9781
+
   description: |
     This test creates a Systemd service unit file and enables it as a service.
 
@@ -58,6 +60,8 @@ atomic_tests:
       systemctl start art-systemd-service.service
 
 - name: Cleanup Systemd Test
+  uuid: 5c6a4cd5-7044-4ebf-8046-6623b1ec9781
+
   description: |
     This cleans up the remnants of the SystemD service unit file creation test.
 

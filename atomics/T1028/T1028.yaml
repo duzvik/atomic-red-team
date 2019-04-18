@@ -4,6 +4,8 @@ display_name: Windows Remote Management
 
 atomic_tests:
 - name: Enable Windows Remote Management
+  uuid: 30ffca3b-95df-4d25-ada7-89751ca6f6dd
+
   description: |
     Powershell Enable WinRM
 
@@ -17,6 +19,8 @@ atomic_tests:
 
 #@todo
 # - name: PowerShell Lateral Movement
+  uuid: 30ffca3b-95df-4d25-ada7-89751ca6f6dd
+
 #   description: |
 #     Powershell lateral movement using the mmc20 application com object
 #
@@ -40,6 +44,8 @@ atomic_tests:
 
 #@todo
 # - name: WMIC Process Call Create
+  uuid: 30ffca3b-95df-4d25-ada7-89751ca6f6dd
+
 #   description: |
 #     Utilize WMIC to start remote process
 #
@@ -67,6 +73,8 @@ atomic_tests:
 
 #@todo
 # - name: Psexec
+  uuid: 30ffca3b-95df-4d25-ada7-89751ca6f6dd
+
 #   description: |
 #     Utilize psexec to start remote process
 #
@@ -94,6 +102,8 @@ atomic_tests:
 
 #@todo
 # - name: Invoke-Command
+  uuid: 30ffca3b-95df-4d25-ada7-89751ca6f6dd
+
 #   description: |
 #     Execute Invoke-command on remote host
 #   supported_platforms:

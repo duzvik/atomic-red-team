@@ -5,6 +5,8 @@ attack_link: https://attack.mitre.org/wiki/Technique/T1114
 
 atomic_tests:
 - name: T1114 Email Collection with PowerShell
+  uuid: 16dc0f28-ea62-45de-9edb-823ae0ee46e9
+
 
   description: |
     Search through local Outlook installation, extract mail, compress the contents, and saves everything to a directory for later exfiltration.

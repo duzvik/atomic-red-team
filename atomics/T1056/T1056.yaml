@@ -4,6 +4,8 @@ display_name: Input Capture
 
 atomic_tests:
 - name: Input Capture
+  uuid: 32825191-7b70-4af5-83ec-2b6f7764e66b
+
   description: |
     Utilize PowerShell and external resource to capture keystrokes
     [Payload](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056/Get-Keystrokes.ps1)

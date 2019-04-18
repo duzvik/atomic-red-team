@@ -4,6 +4,8 @@ display_name: Modify Registry
 
 atomic_tests:
 - name: Modify Registry of Current User Profile - cmd
+  uuid: 5e743ee8-243f-479f-b37a-327bbfcf67da
+
   description: |
     Modify the registry of the currently logged in user using reg.exe cia cmd console
   supported_platforms:
@@ -14,6 +16,8 @@ atomic_tests:
       reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /t REG_DWORD /v HideFileExt /d 1 /f
       
 - name: Modify Registry of Local Machine - cmd
+  uuid: 5e743ee8-243f-479f-b37a-327bbfcf67da
+
   description: |
     Modify the Local Machine registry RUN key to change Windows Defender executable that should be ran on startup.  This should only be possible when
     CMD is ran as Administrative rights.
@@ -25,6 +29,8 @@ atomic_tests:
       reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run /t REG_EXPAND_SZ /v SecurityHealth /d {some_other_executable} /f
 
 - name: Modify Registry of Another User Profile
+  uuid: 5e743ee8-243f-479f-b37a-327bbfcf67da
+
   description: |
     Modify a registry key of each user profile not currently loaded on the machine using both powershell and cmd line tools.
   supported_platforms:

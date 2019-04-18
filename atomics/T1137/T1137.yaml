@@ -4,6 +4,8 @@ display_name: Office Application Startup
 
 atomic_tests:
 - name: DDEAUTO
+  uuid: b0575849-d680-44ae-8d4d-22f2cb5dd6a2
+
   description: |
 
     TrustedSec - Unicorn - https://github.com/trustedsec/unicorn

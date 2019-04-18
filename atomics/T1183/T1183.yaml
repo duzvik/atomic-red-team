@@ -4,6 +4,8 @@ display_name: Image File Execution Options
 
 atomic_tests:
 - name: IFEO Add Debugger
+  uuid: d855715d-0d06-4f5d-bdf4-83153a3b63ee
+
   description: |
     Leverage Global Flags Settings
 
@@ -25,6 +27,8 @@ atomic_tests:
       REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_binary}" /v Debugger /d "#{payload_binary}"
 
 - name: IFEO Global Flags
+  uuid: d855715d-0d06-4f5d-bdf4-83153a3b63ee
+
   description: |
     Leverage Global Flags Settings
 

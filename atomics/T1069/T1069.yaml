@@ -4,6 +4,8 @@ display_name: Permission Groups Discovery
 
 atomic_tests:
 - name: Permission Groups Discovery
+  uuid: dcdb270b-cb20-46bc-b040-d9d7f0ae35e0
+
   description: |
     Permission Groups Discovery
 
@@ -19,6 +21,8 @@ atomic_tests:
       groups
 
 - name: Permission Groups Discovery Windows
+  uuid: dcdb270b-cb20-46bc-b040-d9d7f0ae35e0
+
   description: |
     Permission Groups Discovery for Windows
 
@@ -32,6 +36,8 @@ atomic_tests:
       net group /domain
 
 - name: Permission Groups Discovery PowerShell
+  uuid: dcdb270b-cb20-46bc-b040-d9d7f0ae35e0
+
   description: |
     Permission Groups Discovery utilizing PowerShell
 

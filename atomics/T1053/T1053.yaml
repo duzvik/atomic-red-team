@@ -4,6 +4,8 @@ display_name: Scheduled Task
 
 atomic_tests:
 - name: At.exe Scheduled task
+  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+
   description: |
     Executes cmd.exe
     Note: deprecated in Windows 8+
@@ -16,6 +18,8 @@ atomic_tests:
     command: |
       at 13:20 /interactive cmd
 - name: Scheduled task Local
+  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+
   description: |
 
   supported_platforms:
@@ -38,6 +42,8 @@ atomic_tests:
 
 #@todo
 # - name: Scheduled task Remote
+  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+
 #   description: |
 #       Create a task on a remote system
 #   supported_platforms:

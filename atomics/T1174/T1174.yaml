@@ -4,6 +4,8 @@ display_name: Password Filter DLL
 
 atomic_tests:
 - name: Install and Register Password Filter DLL
+  uuid: 01d42b94-6266-4920-9797-6c6e59c9529e
+
   description: |
     Uses PowerShell to install and register a password filter DLL. Requires a reboot and administrative privileges.
 

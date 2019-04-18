@@ -4,6 +4,8 @@ display_name: Bash History
 
 atomic_tests:
 - name: xxxx
+  uuid: 34a7212f-5e6b-4b1c-915c-5482e38e2042
+
   description: |
     xxxx
   supported_platforms:

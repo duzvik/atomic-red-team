@@ -4,6 +4,8 @@ display_name: Network Sniffing
 
 atomic_tests:
 - name: Packet Capture Linux
+  uuid: 07f0ec78-8928-4825-9d70-9c12e3bcd319
+
   description: |
     Perform a PCAP. Wireshark will be required for tshark. TCPdump may already be installed.
   supported_platforms:
@@ -20,6 +22,8 @@ atomic_tests:
       tshark -c 5 -i #{interface}
 
 - name: Packet Capture MacOS
+  uuid: 07f0ec78-8928-4825-9d70-9c12e3bcd319
+
   description: |
     Perform a PCAP on MacOS. This will require Wireshark/tshark to be installed. TCPdump may already be installed.
   supported_platforms:
@@ -36,6 +40,8 @@ atomic_tests:
      tshark -c 5 -i #{interface}
 
 - name: Packet Capture Windows Command Prompt
+  uuid: 07f0ec78-8928-4825-9d70-9c12e3bcd319
+
   description: |
     Perform a packet capture using the windows command prompt. This will require a host that has Wireshark/Tshark
     installed, along with WinPCAP. Windump will require the windump executable.
@@ -53,6 +59,8 @@ atomic_tests:
       c:\windump.exe
 
 - name: Packet Capture PowerShell
+  uuid: 07f0ec78-8928-4825-9d70-9c12e3bcd319
+
   description: |
     Perform a packet capture using PowerShell with windump or tshark. This will require a host that has Wireshark/Tshark
     installed, along with WinPCAP. Windump will require the windump executable.

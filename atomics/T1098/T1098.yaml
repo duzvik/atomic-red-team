@@ -4,6 +4,8 @@ display_name: Account Manipulation
 
 atomic_tests:
 - name: Admin Account Manipulate
+  uuid: b5d25368-3558-4fde-b12d-547d32930e2d
+
   description: |
     Manipulate Admin Account Name
   supported_platforms:

@@ -4,6 +4,8 @@ display_name: Security Software Discovery
 
 atomic_tests:
 - name: Security Software Discovery
+  uuid: c90207a0-b806-44df-9bbf-a3c4367bc267
+
   description: |
     Methods to identify Security Software on an endpoint
 
@@ -21,6 +23,8 @@ atomic_tests:
       tasklist.exe | findstr /i cylance
 
 - name: Security Software Discovery - powershell
+  uuid: c90207a0-b806-44df-9bbf-a3c4367bc267
+
   description: |
     Methods to identify Security Software on an endpoint
 
@@ -36,6 +40,8 @@ atomic_tests:
       get-process | ?{$_.Description -like "*cylance*"}
 
 - name: Security Software Discovery - ps
+  uuid: c90207a0-b806-44df-9bbf-a3c4367bc267
+
   description: |
     Methods to identify Security Software on an endpoint
 
@@ -50,6 +56,8 @@ atomic_tests:
       ps aux | grep CbOsxSensorService
 
 - name: Security Software Discovery - Sysmon Service
+  uuid: c90207a0-b806-44df-9bbf-a3c4367bc267
+
   description: |
     Discovery of an installed Sysinternals Sysmon service using driver altitude (even if the name is changed).
 

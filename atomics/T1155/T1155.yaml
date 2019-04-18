@@ -4,6 +4,8 @@ display_name: AppleScript
 
 atomic_tests:
 - name: AppleScript
+  uuid: 4555ed5d-6ecb-43b9-a083-130fce00f308
+
   description: |
     Shell Script with AppleScript
 

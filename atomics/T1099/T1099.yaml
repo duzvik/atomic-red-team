@@ -4,6 +4,8 @@ display_name: Timestomp
 
 atomic_tests:
 - name: Set a file's access timestamp
+  uuid: 3760f5cf-834a-4b34-885d-45a8b6c9321e
+
   description: |
     Stomps on the access timestamp of a file
   supported_platforms:
@@ -20,6 +22,8 @@ atomic_tests:
       touch -a -t 197001010000.00 #{target_filename}
 
 - name: Set a file's modification timestamp
+  uuid: 3760f5cf-834a-4b34-885d-45a8b6c9321e
+
   description: |
     Stomps on the modification timestamp of a file
   supported_platforms:
@@ -36,6 +40,8 @@ atomic_tests:
       touch -m -t 197001010000.00 #{target_filename}
 
 - name: Set a file's creation timestamp
+  uuid: 3760f5cf-834a-4b34-885d-45a8b6c9321e
+
   description: |
     Stomps on the create timestamp of a file
 
@@ -60,6 +66,8 @@ atomic_tests:
       stat #{target_filename}
 
 - name: Modify file timestamps using reference file
+  uuid: 3760f5cf-834a-4b34-885d-45a8b6c9321e
+
   description: |
     Modifies the `modify` and `access` timestamps using the timestamps of a specified reference file.
 

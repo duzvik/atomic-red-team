@@ -4,6 +4,8 @@ display_name: Windows Admin Shares
 
 atomic_tests:
 - name: Map admin share
+  uuid: cb35b726-604e-4e0d-8fc6-2dcf9e7a61fe
+
   description: |
     Connecting To Remote Shares
 
@@ -33,6 +35,8 @@ atomic_tests:
       cmd.exe /c "net use \\#{computer_name}\#{share_name} #{password} /u:#{user_name}"
 
 - name: Map Admin Share PowerShell
+  uuid: cb35b726-604e-4e0d-8fc6-2dcf9e7a61fe
+
   description: |
     Map Admin share utilizing PowerShell
   supported_platforms:

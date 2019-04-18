@@ -4,6 +4,8 @@ display_name: Signed Binary Proxy Execution
 
 atomic_tests:
 - name: mavinject - Inject DLL into running process
+  uuid: 2562e730-5fb1-42be-9f4f-3c1397b0a628
+
   description: |
     Injects arbitrary DLL into running process specified by process ID. Requires Windows 10.
 
@@ -25,6 +27,8 @@ atomic_tests:
       mavinject.exe #{process_id} /INJECTRUNNING #{dll_payload}
 
 - name: SyncAppvPublishingServer - Execute arbitrary PowerShell code
+  uuid: 2562e730-5fb1-42be-9f4f-3c1397b0a628
+
   description: |
     Executes arbitrary PowerShell code using SyncAppvPublishingServer.exe. Requires Windows 10.
 
@@ -42,6 +46,8 @@ atomic_tests:
       SyncAppvPublishingServer.exe "n; #{powershell_code}"
 
 - name: Register-CimProvider - Execute evil dll 
+  uuid: 2562e730-5fb1-42be-9f4f-3c1397b0a628
+
   description: |
     Execute arbitrary dll. Requires at least Windows 8/2012. Also note this dll can be served up via SMB
 

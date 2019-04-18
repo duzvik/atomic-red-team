@@ -4,6 +4,8 @@ display_name: File and Directory Discovery
 
 atomic_tests:
 - name: File and Directory Discovery
+  uuid: 452f401b-c4cd-49e9-856d-bdbc6015c32b
+
   description: |
     Find or discover files on the file system
 
@@ -23,6 +25,8 @@ atomic_tests:
      tree /F >> %temp%\download
 
 - name: File and Directory Discovery
+  uuid: 452f401b-c4cd-49e9-856d-bdbc6015c32b
+
   description: |
     Find or discover files on the file system
 
@@ -37,6 +41,8 @@ atomic_tests:
       gci -recurse
 
 - name: Nix File and Diectory Discovery
+  uuid: 452f401b-c4cd-49e9-856d-bdbc6015c32b
+
   description: |
     Find or discover files on the file system
 
@@ -63,6 +69,8 @@ atomic_tests:
 
 
 - name: Nix File and Directory Discovery
+  uuid: 452f401b-c4cd-49e9-856d-bdbc6015c32b
+
   description: |
     Find or discover files on the file system
 

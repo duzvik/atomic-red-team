@@ -4,6 +4,8 @@ display_name: RegSvcs/RegAsm
 
 atomic_tests:
 - name: Regasm Uninstall Method Call Test
+  uuid: 59d25168-bb74-4e66-9483-a13115fcc52c
+
   description: |
     Executes the Uninstall Method, No Admin Rights Required
   supported_platforms:
@@ -25,6 +27,8 @@ atomic_tests:
       del #{file_name}
 
 - name: Regsvs Uninstall Method Call Test
+  uuid: 59d25168-bb74-4e66-9483-a13115fcc52c
+
   description: |
     Executes the Uninstall Method, No Admin Rights Required, Requires SNK
   supported_platforms:

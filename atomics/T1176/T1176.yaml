@@ -4,6 +4,8 @@ display_name: Browser Extensions
 
 atomic_tests:
 - name: Chrome (Developer Mode)
+  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+
   description: |
     xxx
   supported_platforms:
@@ -22,6 +24,8 @@ atomic_tests:
       3. Click 'Select'
 
 - name: Chrome (Chrome Web Store)
+  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+
   description: |
     xxx
   supported_platforms:
@@ -37,6 +41,8 @@ atomic_tests:
       2. Click 'Add to Chrome'
 
 - name: Firefox
+  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+
   description: |
     Create a file called test.wma, with the duration of 30 seconds
   supported_platforms:

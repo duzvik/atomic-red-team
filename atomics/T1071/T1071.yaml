@@ -4,6 +4,8 @@ display_name: Standard Application Layer Protocol
 
 atomic_tests:
 - name: Malicious User Agents
+  uuid: 0220622d-6828-4404-9591-b610f716a450
+
   description: |
     This test simulates an infected host beaconing to command and control.
     Inspired by APTSimulator - https://github.com/NextronSystems/APTSimulator/blob/master/test-sets/command-and-control/malicious-user-agents.bat
@@ -24,6 +26,8 @@ atomic_tests:
       Invoke-WebRequest #{domain} -UserAgent "*<|>*" | out-null
 
 - name: Malicious User Agents - Nix
+  uuid: 0220622d-6828-4404-9591-b610f716a450
+
   description: |
     This test simulates an infected host beaconing to command and control.
     Inspired by APTSimulator - https://github.com/NextronSystems/APTSimulator/blob/master/test-sets/command-and-control/malicious-user-agents.bat

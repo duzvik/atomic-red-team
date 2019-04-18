@@ -4,6 +4,8 @@ display_name: Application Window Discovery
 
 atomic_tests:
 - name: List Process Main Windows - C# .NET
+  uuid: 66a6afc8-ecfe-46c5-b6b4-fbf1ee45f970
+
   description: |
     Compiles and executes C# code to list main window titles associated with each process.
 

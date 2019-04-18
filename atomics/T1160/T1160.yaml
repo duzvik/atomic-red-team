@@ -4,6 +4,8 @@ display_name: Launch Daemon
 
 atomic_tests:
 - name: Launch Daemon
+  uuid: d7ed8f70-0291-4621-b2f8-f4cc23db27fa
+
   description: |
     Utilize LaunchDaemon to launch `Hello World`
 

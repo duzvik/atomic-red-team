@@ -4,6 +4,8 @@ display_name: Component Object Model Hijacking
 
 atomic_tests:
 - name: Component Object Model Hijacking
+  uuid: 2af32ba0-1f65-477f-b004-85879aded6c8
+
   description: |
     Hijack COM Object used by certutil.exe
 

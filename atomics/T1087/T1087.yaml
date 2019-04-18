@@ -4,6 +4,8 @@ display_name: Account Discovery
 
 atomic_tests:
 - name: Enumerate all accounts
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Enumerate all accounts by copying /etc/passwd to another file
   supported_platforms:
@@ -20,6 +22,8 @@ atomic_tests:
       cat /etc/passwd > #{output_file}
 
 - name: View sudoers access
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     xxx (requires root)
   supported_platforms:
@@ -36,6 +40,8 @@ atomic_tests:
       cat /etc/sudoers > #{output_file}
 
 - name: View accounts with UID 0
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     View accounts wtih UID 0
   supported_platforms:
@@ -50,6 +56,8 @@ atomic_tests:
     name: sh
     command: |
       grep 'x:0:' /etc/passwd > #{output_file} - name: List opened files by user
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     List opened files by user
   supported_platforms:
@@ -61,6 +69,8 @@ atomic_tests:
       username=$(echo $HOME | awk -F'/' '{print $3}') && lsof -u $username
 
 - name: Show if a user account has ever logger in remotely
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Show if a user account has ever logger in remotely
   supported_platforms:
@@ -77,6 +87,8 @@ atomic_tests:
       lastlog > #{output_file}
 
 - name: Enumerate users and groups
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Utilize groups and id to enumerate users and groups
   supported_platforms:
@@ -90,6 +102,8 @@ atomic_tests:
       id
 
 - name: Enumerate users and groups
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Utilize local utilities to enumerate users and groups
   supported_platforms:
@@ -105,6 +119,8 @@ atomic_tests:
       dscacheutil -q user
 
 - name: Enumerate all accounts
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Enumerate all accounts
   supported_platforms:
@@ -120,6 +136,8 @@ atomic_tests:
       net localgroup
 
 - name: Enumerate all accounts via PowerShell
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Enumerate all accounts via PowerShell
   supported_platforms:
@@ -140,6 +158,8 @@ atomic_tests:
       net localgroup
 
 - name: Enumerate logged on users
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Enumerate logged on users
   supported_platforms:
@@ -150,6 +170,8 @@ atomic_tests:
       query user
 
 - name: Enumerate logged on users via PowerShell
+  uuid: 9bd1a6a1-40ed-4fb8-a2be-4283ea28fd50
+
   description: |
     Enumerate logged on users via PowerShell
   supported_platforms:

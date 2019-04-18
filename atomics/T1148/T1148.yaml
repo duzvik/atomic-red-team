@@ -4,6 +4,8 @@ display_name: HISTCONTROL
 
 atomic_tests:
 - name: Disable history collection
+  uuid: 9efbf6d2-d525-48db-a900-4cd359f50d39
+
   description: |
     Disables history collection in shells
   supported_platforms:
@@ -21,6 +23,8 @@ atomic_tests:
       ls #{evil_command}
 
 - name: Mac HISTCONTROL
+  uuid: 9efbf6d2-d525-48db-a900-4cd359f50d39
+
   description: |
     xxx
   supported_platforms:

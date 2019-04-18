@@ -4,6 +4,8 @@ display_name: Service Installation
 
 atomic_tests:
 - name: Service Installation
+  uuid: e1a1521b-da63-4a16-a1c0-badb2fe05a68
+
   description: |
     Installs A Local Service
 
@@ -27,6 +29,8 @@ atomic_tests:
       sc.exe delete #{service_name}
 
 - name: Service Installation PowerShell
+  uuid: e1a1521b-da63-4a16-a1c0-badb2fe05a68
+
     Installs A Local Service using PowerShell
   description: |
       Installs A Local Service via PowerShell

@@ -4,6 +4,8 @@ display_name: Credentials in Registry
 
 atomic_tests:
 - name: Enumeration for Credentials in Registry
+  uuid: 75f2c18d-99c1-4b3a-b010-2c848faca306
+
   description: |
     Queries to enumerate for credentials in the Registry.
 

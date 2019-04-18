@@ -4,6 +4,8 @@ display_name: Bypass User Account Control
 
 atomic_tests:
 - name: Bypass UAC using Event Viewer
+  uuid: beb9db35-b755-4329-b655-f0b291c8ded9
+
   description: |
     Bypasses User Account Control using Event Viewer and a relevant Windows Registry modification. More information here - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/
 
@@ -23,6 +25,8 @@ atomic_tests:
       cmd.exe /c eventvwr.msc
 
 - name: Bypass UAC using Event Viewer - PowerShell
+  uuid: beb9db35-b755-4329-b655-f0b291c8ded9
+
   description: |
     PowerShell code to bypass User Account Control using Event Viewer and a relevant Windows Registry modification. More information here - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/
 
@@ -43,6 +47,8 @@ atomic_tests:
       Start-Process "C:\Windows\System32\eventvwr.msc"
 
 - name: Bypass UAC using Fodhelper
+  uuid: beb9db35-b755-4329-b655-f0b291c8ded9
+
   description: |
     Bypasses User Account Control using the Windows 10 Features on Demand Helper (fodhelper.exe). Requires Windows 10.
 
@@ -63,6 +69,8 @@ atomic_tests:
       fodhelper.exe
 
 - name: Bypass UAC using Fodhelper - PowerShell
+  uuid: beb9db35-b755-4329-b655-f0b291c8ded9
+
   description: |
     PowerShell code to bypass User Account Control using the Windows 10 Features on Demand Helper (fodhelper.exe). Requires Windows 10.
 

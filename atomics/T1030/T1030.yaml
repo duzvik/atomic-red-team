@@ -4,6 +4,8 @@ display_name: Data Transfer Size Limits
 
 atomic_tests:
 - name: Data Transfer Size Limits
+  uuid: ba423e23-8fbe-403b-8cf2-3fba106527aa
+
   description: |
     Take a file/directory, split it into 5Mb chunks
 

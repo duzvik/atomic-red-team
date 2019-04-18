@@ -4,6 +4,8 @@ display_name: Data Encoding
 
 atomic_tests:
 - name: Base64 Encoded data.
+  uuid: 6cf32ffb-ca82-4891-a5c4-00be8c353bcf
+
   description: |
     Utilizing a common technique for posting base64 encoded data.
 

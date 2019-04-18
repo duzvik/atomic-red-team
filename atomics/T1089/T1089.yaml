@@ -4,6 +4,8 @@ display_name: Disabling Security Tools
 
 atomic_tests:
 - name: Disable iptables firewall
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables the iptables firewall
   supported_platforms:
@@ -23,6 +25,8 @@ atomic_tests:
       fi
 
 - name: Disable syslog
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables syslog collection
   supported_platforms:
@@ -40,6 +44,8 @@ atomic_tests:
       fi
 
 - name: Disable Cb Response
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disable the Cb Response service
   supported_platforms:
@@ -57,6 +63,8 @@ atomic_tests:
       fi
 
 - name: Disable SELinux
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables SELinux enforcement
   supported_platforms:
@@ -67,6 +75,8 @@ atomic_tests:
       setenforce 0
 
 - name: Disable Carbon Black Response
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables Carbon Black Response
   supported_platforms:
@@ -77,6 +87,8 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/com.carbonblack.daemon.plist
 
 - name: Disable LittleSnitch
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables LittleSnitch
   supported_platforms:
@@ -87,6 +99,8 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/at.obdev.littlesnitchd.plist
 
 - name: Disable OpenDNS Umbrella
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables OpenDNS Umbrella
   supported_platforms:
@@ -97,6 +111,8 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist
 
 - name: Unload Sysmon Filter Driver
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Unloads the Sysinternals Sysmon filter driver without stopping the Sysmon service. 
   supported_platforms:
@@ -112,6 +128,8 @@ atomic_tests:
       fltmc.exe unload #{sysmon_driver}
 
 - name: Disable Windows IIS HTTP Logging
+  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+
   description: |
     Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union). 
     This action requires HTTP logging configurations in IIS to be unlocked.

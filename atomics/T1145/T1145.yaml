@@ -4,6 +4,8 @@ display_name: Private Keys
 
 atomic_tests:
 - name: Private Keys
+  uuid: b630b79b-87d8-4564-bdbd-6e5d056767b7
+
   description: |
     Find private keys on the Windows file system.
 
@@ -19,6 +21,8 @@ atomic_tests:
       dir c:\ /b /s .key | findstr /e .key
 
 - name: Discover Private SSH Keys
+  uuid: b630b79b-87d8-4564-bdbd-6e5d056767b7
+
   description: |
     Discover private SSH keys on a macOS or Linux system.
   supported_platforms:
@@ -36,6 +40,8 @@ atomic_tests:
       find / -name id_dsa >> #{output_file}
 
 - name: Copy Private SSH Keys with CP
+  uuid: b630b79b-87d8-4564-bdbd-6e5d056767b7
+
   description: |
     Copy private SSH keys on a Linux system to a staging folder using the `cp` command.
   supported_platforms:
@@ -53,6 +59,8 @@ atomic_tests:
       find / -name id_dsa -exec cp --parents {} #{output_folder} \;
 
 - name: Copy Private SSH Keys with rsync
+  uuid: b630b79b-87d8-4564-bdbd-6e5d056767b7
+
   description: |
     Copy private SSH keys on a Linux or macOS system to a staging folder using the `rsync` command.
   supported_platforms:

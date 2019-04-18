@@ -4,6 +4,8 @@ display_name: Security Support Provider
 
 atomic_tests:
 - name: Modify SSP configuration in registry 
+  uuid: b808e8e7-6238-4b64-8aac-69a050fb4deb
+
   description: Add a value to a Windows registry SSP key, simulating an adversarial modification of those keys. 
   supported_platforms:
     - windows

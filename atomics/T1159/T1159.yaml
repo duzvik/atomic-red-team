@@ -4,6 +4,8 @@ display_name: Launch Agent
 
 atomic_tests:
 - name: Launch Agent
+  uuid: 9866dd42-2fa3-401a-8717-005f9827b621
+
   description: |
     Create a plist and execute it
 

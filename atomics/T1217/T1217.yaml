@@ -4,6 +4,8 @@ display_name: Browser Bookmark Discovery
 
 atomic_tests:
 - name: List Mozilla Firefox Bookmark Database Files on Linux
+  uuid: 119e9611-347c-4adb-966c-cc7f4e61b837
+
   description: |
     Searches for Mozilla Firefox's places.sqlite file (on Linux distributions) that contains bookmarks and lists any found instances to a text file.
 
@@ -16,6 +18,8 @@ atomic_tests:
       find / -path "*.mozilla/firefox/*/places.sqlite" -exec echo {} >> /tmp/firefox-bookmarks.txt \;
 
 - name: List Mozilla Firefox Bookmark Database Files on macOS
+  uuid: 119e9611-347c-4adb-966c-cc7f4e61b837
+
   description: |
     Searches for Mozilla Firefox's places.sqlite file (on macOS) that contains bookmarks and lists any found instances to a text file.
 

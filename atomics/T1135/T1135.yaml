@@ -4,6 +4,8 @@ display_name: Network Share Discovery
 
 atomic_tests:
 - name: Network Share Discovery
+  uuid: 7c75255d-eeb4-490a-a3bc-e60d33d08f26
+
   description: |
     Network Share Discovery
 
@@ -25,6 +27,8 @@ atomic_tests:
       showmount #{computer_name}
 
 - name: Network Share Discovery command prompt
+  uuid: 7c75255d-eeb4-490a-a3bc-e60d33d08f26
+
   description: |
     Network Share Discovery utilizing the command prompt
   supported_platforms:
@@ -40,6 +44,8 @@ atomic_tests:
       net view \\#{computer_name}
 
 - name: Network Share Discovery PowerShell
+  uuid: 7c75255d-eeb4-490a-a3bc-e60d33d08f26
+
   description: |
     Network Share Discovery utilizing PowerShell
   supported_platforms:

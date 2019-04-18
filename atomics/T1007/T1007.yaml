@@ -4,6 +4,8 @@ display_name: System Service Discovery
 
 atomic_tests:
 - name: System Service Discovery
+  uuid: 94adbef5-0ce6-4c82-9c4a-4d275d0f830d
+
   description: |
     Identify system services
 
@@ -27,6 +29,8 @@ atomic_tests:
       wmic service where (displayname like "#{service_name}") get name
 
 - name: System Service Discovery - net.exe
+  uuid: 94adbef5-0ce6-4c82-9c4a-4d275d0f830d
+
   description: |
     Enumerates started system services using net.exe and writes them to a file. This technique has been used by multiple threat actors.
   supported_platforms:

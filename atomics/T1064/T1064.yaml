@@ -4,6 +4,8 @@ display_name: Scripting
 
 atomic_tests:
 - name: Create and Execute Bash Shell Script
+  uuid: a32ab763-4bb6-4f86-8fea-832230650f51
+
   description: |
     Creates and executes a simple bash script.
 

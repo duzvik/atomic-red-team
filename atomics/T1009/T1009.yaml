@@ -4,6 +4,8 @@ display_name: Binary Padding
 
 atomic_tests:
 - name: Pad Binary to Change Hash - Linux/macOS dd
+  uuid: 04494f93-ecbe-4565-bbc5-0dc7d451b294
+
   description: |
     Uses dd to add a zero to the binary to change the hash
 

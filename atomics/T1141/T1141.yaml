@@ -4,6 +4,8 @@ display_name: Input Prompt
 
 atomic_tests:
 - name: Prompt User for Password
+  uuid: cc02b632-ba8d-4fd6-b8b5-6bf00eee8b3b
+
   description: |
     Prompt User for Password (Local Phishing)
     Reference: http://fuzzynop.blogspot.com/2014/10/osascript-for-local-phishing.html

@@ -4,6 +4,8 @@ display_name: Winlogon Helper DLL
 
 atomic_tests:
 - name: Winlogon Shell Key Persistence - PowerShell
+  uuid: 51230c11-36e0-4c7f-bb49-d62e552ef855
+
   description: |
     PowerShell code to set Winlogon shell key to execute a binary at logon along with explorer.exe.
 
@@ -22,6 +24,8 @@ atomic_tests:
       Set-ItemProperty "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\" "Shell" "explorer.exe, #{binary_to_execute}" -Force
 
 - name: Winlogon Userinit Key Persistence - PowerShell
+  uuid: 51230c11-36e0-4c7f-bb49-d62e552ef855
+
   description: |
     PowerShell code to set Winlogon userinit key to execute a binary at logon along with userinit.exe.
 
@@ -40,6 +44,8 @@ atomic_tests:
       Set-ItemProperty "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\" "Userinit" "Userinit.exe, #{binary_to_execute}" -Force
 
 - name: Winlogon Notify Key Logon Persistence - PowerShell
+  uuid: 51230c11-36e0-4c7f-bb49-d62e552ef855
+
   description: |
     PowerShell code to set Winlogon Notify key to execute a notification package DLL at logon.
 

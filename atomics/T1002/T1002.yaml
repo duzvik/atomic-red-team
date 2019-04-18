@@ -4,6 +4,8 @@ display_name: Data Compressed
 
 atomic_tests:
 - name: Compress Data for Exfiltration With PowerShell
+  uuid: 1d3819d3-94db-4341-8c83-d81a8514340d
+
   description: |
     An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration
   supported_platforms:
@@ -23,6 +25,8 @@ atomic_tests:
       dir #{input_file} -Recurse | Compress-Archive -DestinationPath #{output_file}
 
 - name: Compress Data for Exfiltration With Rar
+  uuid: 1d3819d3-94db-4341-8c83-d81a8514340d
+
   description: |
     An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration
   supported_platforms:
@@ -42,6 +46,8 @@ atomic_tests:
       rar a -r #{output_file} #{input_file}
 
 - name: Data Compressed - nix - zip
+  uuid: 1d3819d3-94db-4341-8c83-d81a8514340d
+
   description: |
     An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration. This test uses standard zip compression.
   supported_platforms:
@@ -62,6 +68,8 @@ atomic_tests:
       zip #{output_file} #{input_files}
 
 - name: Data Compressed - nix - gzip Single File
+  uuid: 1d3819d3-94db-4341-8c83-d81a8514340d
+
   description: |
     An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration. This test uses standard gzip compression.
   supported_platforms:
@@ -78,6 +86,8 @@ atomic_tests:
       gzip -f #{input_file}
 
 - name: Data Compressed - nix - tar Folder or File
+  uuid: 1d3819d3-94db-4341-8c83-d81a8514340d
+
   description: |
     An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration. This test uses standard gzip compression.
   supported_platforms:

@@ -4,6 +4,8 @@ display_name: Trap
 
 atomic_tests:
 - name: Trap
+  uuid: cf3f54b4-8b55-457f-9589-af745edb1a3b
+
   description: |
     After exiting the shell, the script will download and execute.
 

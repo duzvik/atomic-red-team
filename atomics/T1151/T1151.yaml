@@ -4,6 +4,8 @@ display_name: Space After Filename
 
 atomic_tests:
 - name: Space After Filename
+  uuid: 8d7aa994-7f74-496b-91a0-89753f8b9384
+
   description: |
     Space After Filename
 

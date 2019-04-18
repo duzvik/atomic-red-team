@@ -4,6 +4,8 @@ display_name: Process Injection
 
 atomic_tests:
 - name: Process Injection via mavinject.exe
+  uuid: 872ea31f-e6e3-4de2-87cd-ee391ffdfb35
+
   description: |
     Windows 10 Utility To Inject DLLS
 
@@ -25,6 +27,8 @@ atomic_tests:
       mavinject $pid /INJECTRUNNING #{dll_payload}
 
 - name: Process Injection via PowerSploit
+  uuid: 872ea31f-e6e3-4de2-87cd-ee391ffdfb35
+
   description: |
     PowerShell Injection using [PowerSploit Invoke-DLLInjection](https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-DllInjection.ps1)
 
@@ -46,6 +50,8 @@ atomic_tests:
       Invoke-DllInjection.ps1 -ProcessID #{process_id} -Dll #{dll_payload}
 
 - name: Shared Library Injection via /etc/ld.so.preload
+  uuid: 872ea31f-e6e3-4de2-87cd-ee391ffdfb35
+
   description: |
     This test adds a shared library to the `ld.so.preload` list to execute and intercept API calls. This technique was used by threat actor Rocke during the exploitation of Linux web servers. This requires the `glibc` package.
   supported_platforms:
@@ -60,6 +66,8 @@ atomic_tests:
     command: |
       echo #{path_to_shared_library} > /etc/ld.so.preload
 - name: Process Injection via C#
+  uuid: 872ea31f-e6e3-4de2-87cd-ee391ffdfb35
+
   description: |
     Process Injection using C#
     reference: https://github.com/pwndizzle/c-sharp-memory-injection

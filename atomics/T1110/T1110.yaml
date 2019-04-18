@@ -4,6 +4,8 @@ display_name: Brute Force Credential Access
 
 atomic_tests:
 - name: Brute Force Credentials
+  uuid: 29e4afc8-dc3b-4349-84a1-ce351b706c9f
+
   description: |
     Creates username and password files then attempts to brute force on remote host
   supported_platforms:

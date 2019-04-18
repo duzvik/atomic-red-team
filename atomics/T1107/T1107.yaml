@@ -4,6 +4,8 @@ display_name: File Deletion
 
 atomic_tests:
 - name: Delete a single file - Linux/macOS
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Delete a single file from the temporary directory
   supported_platforms:
@@ -20,6 +22,8 @@ atomic_tests:
       rm -f #{file_to_delete}
 
 - name: Delete an entire folder - Linux/macOS
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Recursively delete the temporary directory and all files contained within it
   supported_platforms:
@@ -36,6 +40,8 @@ atomic_tests:
       rm -rf #{folder_to_delete}
 
 - name: Overwrite and delete a file with shred
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Use the `shred` command to overwrite the temporary file and then delete it
   supported_platforms:
@@ -51,6 +57,8 @@ atomic_tests:
       shred -u #{file_to_shred}
 
 - name: Delete a single file - Windows cmd
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Delete a single file from the temporary directory using cmd.exe
   supported_platforms:
@@ -66,6 +74,8 @@ atomic_tests:
       del /f #{file_to_delete}
 
 - name: Delete an entire folder - Windows cmd
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Recursively delete the temporary directory and all files contained within it using cmd.exe
   supported_platforms:
@@ -81,6 +91,8 @@ atomic_tests:
       del /f /S #{folder_to_delete}
 
 - name: Delete a single file - Windows PowerShell
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Delete a single file from the temporary directory using Powershell
   supported_platforms:
@@ -96,6 +108,8 @@ atomic_tests:
       Remove-Item -path "#{file_to_delete}"
 
 - name: Delete an entire folder - Windows PowerShell
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Recursively delete the temporary directory and all files contained within it using Powershell
   supported_platforms:
@@ -111,6 +125,8 @@ atomic_tests:
       Remove-Item -path "#{folder_to_delete}" -recurse
 
 - name: Delete VSS - vssadmin
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Delete all volume shadow copies with vssadmin.exe
   supported_platforms:
@@ -121,6 +137,8 @@ atomic_tests:
       vssadmin.exe Delete Shadows /All /Quiet
 
 - name: Delete VSS - wmic
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     Delete all volume shadow copies with wmic
   supported_platforms:
@@ -131,6 +149,8 @@ atomic_tests:
       wmic shadowcopy delete
 
 - name: bcdedit
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     This test leverages `bcdedit` to remove boot-time recovery measures.
   supported_platforms:
@@ -142,6 +162,8 @@ atomic_tests:
       bcdedit /set {default} recoveryenabled no
 
 - name: wbadmin
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     This test deletes Windows Backup catalogs. 
   supported_platforms:
@@ -152,6 +174,8 @@ atomic_tests:
       wbadmin delete catalog -quiet
 
 - name: Delete Filesystem - Linux
+  uuid: 6c39f241-f072-4251-ba94-986c47eedf81
+
   description: |
     This test deletes the entire root filesystem of a Linux system. This technique was used by Amnesia IoT malware to avoid analysis. This test is dangerous and destructive, do NOT use on production equipment.
   supported_platforms:

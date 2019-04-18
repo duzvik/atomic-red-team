@@ -4,6 +4,8 @@ display_name: Network Service Scanning
 
 atomic_tests:
 - name: Port Scan
+  uuid: 511bd81b-0f21-427a-852f-6e2cffa51f6f
+
   description: |
     Scan ports to check for listening ports
   supported_platforms:
@@ -18,6 +20,8 @@ atomic_tests:
       done
 
 - name: Port Scan Nmap
+  uuid: 511bd81b-0f21-427a-852f-6e2cffa51f6f
+
   description: |
     Scan ports to check for listening ports with Nmap.
 

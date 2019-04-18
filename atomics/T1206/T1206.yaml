@@ -4,6 +4,8 @@ display_name: Sudo Caching
 
 atomic_tests:
 - name: Unlimited sudo cache timeout
+  uuid: 845fce86-eb1a-46cd-8fc8-df86f74303a2
+
   description: |
     Sets sudo caching timestamp_timeout to a value for unlimited. This is dangerous to modify without using 'visudo', do not do this on a production system.
 
@@ -18,6 +20,8 @@ atomic_tests:
       sudo visudo -c -f /etc/sudoers
 
 - name: Disable tty_tickets for sudo caching
+  uuid: 845fce86-eb1a-46cd-8fc8-df86f74303a2
+
   description: |
     Sets sudo caching tty_tickets value to disabled. This is dangerous to modify without using 'visudo', do not do this on a production system.
 

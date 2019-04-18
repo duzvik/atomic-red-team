@@ -4,6 +4,8 @@ display_name: Password Policy Discovery
 
 atomic_tests:
 - name: Examine password complexity policy - Ubuntu
+  uuid: 459f1764-5452-4ca8-81b6-41de516980b4
+
   description: |
     Lists the password complexity policy to console on Ubuntu Linux.
 
@@ -16,6 +18,8 @@ atomic_tests:
       cat /etc/pam.d/common-password
 
 - name: Examine password complexity policy - CentOS/RHEL 7.x
+  uuid: 459f1764-5452-4ca8-81b6-41de516980b4
+
   description: |
     Lists the password complexity policy to console on CentOS/RHEL 7.x Linux.
 
@@ -28,6 +32,8 @@ atomic_tests:
       cat /etc/security/pwquality.conf
 
 - name: Examine password complexity policy - CentOS/RHEL 6.x
+  uuid: 459f1764-5452-4ca8-81b6-41de516980b4
+
   description: |
     Lists the password complexity policy to console on CentOS/RHEL 6.x Linux.
 
@@ -42,6 +48,8 @@ atomic_tests:
       cat /etc/security/pwquality.conf
 
 - name: Examine password expiration policy - All Linux
+  uuid: 459f1764-5452-4ca8-81b6-41de516980b4
+
   description: |
     Lists the password expiration policy to console on CentOS/RHEL/Ubuntu.
 

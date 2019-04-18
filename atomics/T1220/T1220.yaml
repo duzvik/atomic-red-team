@@ -4,6 +4,8 @@ display_name: XSL Script Processing
 
 atomic_tests:
 - name: MSXSL Bypass using local files
+  uuid: 3d47661b-57f3-45a8-bd5d-ac1c9c353f13
+
   description: |
     Executes the code specified within a XSL script tag during XSL transformation using a local payload. Requires download of MSXSL from Microsoft at https://www.microsoft.com/en-us/download/details.aspx?id=21714.
   supported_platforms:
@@ -23,6 +25,8 @@ atomic_tests:
      C:\Windows\Temp\msxsl.exe #{xmlfile} #{xslfile}
 
 - name: MSXSL Bypass using remote files
+  uuid: 3d47661b-57f3-45a8-bd5d-ac1c9c353f13
+
   description: |
     Executes the code specified within a XSL script tag during XSL transformation using a remote payload. Requires download of MSXSL from Microsoft at https://www.microsoft.com/en-us/download/details.aspx?id=21714.
   supported_platforms:
@@ -43,6 +47,8 @@ atomic_tests:
 
 #@todo
 # - name: WMIC bypass using local XSL file
+  uuid: 3d47661b-57f3-45a8-bd5d-ac1c9c353f13
+
 #   description: |
 #     Executes the code specified within a XSL script using a local payload.
 #   supported_platforms:
@@ -62,6 +68,8 @@ atomic_tests:
 #      wmic.exe #{wmic_command} /FORMAT:#{local_xsl_file}
 #
 # - name: WMIC bypass using remote XSL file
+  uuid: 3d47661b-57f3-45a8-bd5d-ac1c9c353f13
+
 #   description: |
 #     Executes the code specified within a XSL script using a remote payload.
 #   supported_platforms:

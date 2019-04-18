@@ -4,6 +4,8 @@ display_name: Hidden Files and Directories
 
 atomic_tests:
 - name: Create a hidden file in a hidden directory
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Creates a hidden file inside a hidden directory
   supported_platforms:
@@ -16,6 +18,8 @@ atomic_tests:
       echo "this file is hidden" > .hidden-directory/.hidden-file
 
 - name: Mac Hidden file
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Hide a file on MacOS
 
@@ -28,6 +32,8 @@ atomic_tests:
       sudo xattr -lr * / 2>&1 /dev/null | grep -C 2 "00 00 00 00 00 00 00 00 40 00 FF FF FF FF 00 00"
 
 - name: Hidden file
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     mv file to a .file
 
@@ -50,6 +56,8 @@ atomic_tests:
       mv #{filename} .#{output_filename}
 
 - name: Create Windows System File with Attrib
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Creates a file and marks it as a system file using the attrib.exe utility.
 
@@ -67,6 +75,8 @@ atomic_tests:
       attrib.exe +s #{filename}
 
 - name: Create Windows Hidden File with Attrib
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Creates a file and marks it as hidden using the attrib.exe utility.
 
@@ -84,6 +94,8 @@ atomic_tests:
       attrib.exe +h #{filename}
 
 - name: Hidden files
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Requires Apple Dev Tools
 
@@ -100,6 +112,8 @@ atomic_tests:
       setfile -a V #{filename}
 
 - name: Hide a Directory
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Hide a directory on MacOS
 
@@ -116,6 +130,8 @@ atomic_tests:
       chflags hidden #{filename}
 
 - name: Show all hidden files
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Show all hidden files on MacOS
 
@@ -128,6 +144,8 @@ atomic_tests:
       defaults write com.apple.finder AppleShowAllFiles YES
 
 - name: Create Visible Directories
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Create visible directories on MacOS and Linux
 
@@ -144,6 +162,8 @@ atomic_tests:
       ls visible-directory
 
 - name: Create hidden directories and files
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Create hidden directories and files on Nix platforms
 
@@ -160,6 +180,8 @@ atomic_tests:
       ls -la .hidden-directory
 
 - name: Create ADS command prompt
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Create an Alternate Data Stream with the command prompt. Write access is required.
   supported_platforms:
@@ -181,6 +203,8 @@ atomic_tests:
       dir /s /r | find ":$DATA"
 
 - name: Create ADS PowerShell
+  uuid: 42f030c9-1707-46bf-8729-999711cb0559
+
   description: |
     Create an Alternate Data Stream with PowerShell. Write access is required.
   supported_platforms:

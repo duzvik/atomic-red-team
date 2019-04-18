@@ -4,6 +4,8 @@ display_name: SUDO
 
 atomic_tests:
 - name: Sudo usage
+  uuid: df24d14f-ba55-4999-866e-e8d7743a985d
+
   description: |
     Common Sudo enumeration methods.
 

