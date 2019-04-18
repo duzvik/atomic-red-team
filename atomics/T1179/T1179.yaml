@@ -4,7 +4,7 @@ display_name: Hooking
 
 atomic_tests:
 - name: Hook PowerShell TLS Encrypt/Decrypt Messages
-  uuid: bce5dd27-5af8-49f0-8d98-eb3aa629a475
+  uuid: 8332e40f-15db-4ccb-8146-3d2f23f4774a
 
   description: |
     Hooks functions in PowerShell to read TLS Communications

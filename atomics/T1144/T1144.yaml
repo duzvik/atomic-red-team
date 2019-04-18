@@ -4,7 +4,7 @@ display_name: Gatekeeper Bypass
 
 atomic_tests:
 - name: Gatekeeper Bypass
-  uuid: 1cd043f3-cac9-4fb8-b7a2-e720537a3421
+  uuid: 68cf8a33-c259-498c-96da-74c9f6341ec2
 
   description: |
     Gatekeeper Bypass via command line

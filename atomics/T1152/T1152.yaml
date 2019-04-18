@@ -4,7 +4,7 @@ display_name: Launchctl
 
 atomic_tests:
 - name: Launchctl
-  uuid: f6e2bebc-e49a-43b1-b7a0-8705b9213496
+  uuid: b8e86ffe-dfbb-4c9d-afb7-4631ff0bf063
 
   description: |
     Utilize launchctl

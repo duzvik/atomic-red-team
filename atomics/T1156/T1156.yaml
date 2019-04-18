@@ -4,7 +4,7 @@ display_name: .bash_profile and .bashrc
 
 atomic_tests:
 - name: Add command to .bash_profile
-  uuid: bfd8442b-87b5-4892-a673-c5af35695cd6
+  uuid: 4f466786-2131-4c70-b0a9-8f5cd15cfd20
 
   description: |
     Adds a command to the .bash_profile file of the current user
@@ -22,7 +22,7 @@ atomic_tests:
       echo "#{command_to_add}" >> ~/.bash_profile
 
 - name: Add command to .bashrc
-  uuid: bfd8442b-87b5-4892-a673-c5af35695cd6
+  uuid: 5b2fea35-96eb-46e3-86b4-72bf5f6ede13
 
   description: |
     Adds a command to the .bashrc file of the current user

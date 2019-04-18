@@ -4,7 +4,7 @@ display_name: Windows Management Instrumentation
 
 atomic_tests:
 - name: WMI Reconnaissance Users
-  uuid: 188b7eb2-9691-4099-a0a0-824f94fad6aa
+  uuid: ecaf8837-04ed-4c4f-b2c5-583821ca300b
 
   description: |
     WMI List User Accounts
@@ -15,7 +15,7 @@ atomic_tests:
     command: |
       wmic useraccount get /ALL
 - name: WMI Reconnaissance Processes
-  uuid: 188b7eb2-9691-4099-a0a0-824f94fad6aa
+  uuid: 4e932e95-bfc8-4ea1-a815-a41520c7c2ff
 
   description: |
     WMI List Processes
@@ -26,7 +26,7 @@ atomic_tests:
     command: |
       wmic process get caption,executablepath,commandline
 - name: WMI Reconnaissance Software
-  uuid: 188b7eb2-9691-4099-a0a0-824f94fad6aa
+  uuid: 9ae6cdec-6756-474d-b4e6-8cddae23a57d
 
   description: |
     WMI List Software
@@ -37,7 +37,7 @@ atomic_tests:
     command: |
       wmic qfe get description,installedOn /format:csv
 - name: WMI Reconnaissance List Remote Services
-  uuid: 188b7eb2-9691-4099-a0a0-824f94fad6aa
+  uuid: 90605a0e-37c9-436d-aa01-9f74f5be6f21
 
   description: |
     WMI List Remote Services

@@ -4,7 +4,7 @@ display_name: System Time Discovery
 
 atomic_tests:
 - name: System Time Discovery
-  uuid: 74404d02-3cf6-4573-b414-5bbd681b1816
+  uuid: 40702372-5062-4a84-bd24-8d71848e561f
 
   description: |
     Identify the system time
@@ -25,7 +25,7 @@ atomic_tests:
       w32tm /tz
 
 - name: System Time Discovery - PowerShell
-  uuid: 74404d02-3cf6-4573-b414-5bbd681b1816
+  uuid: ef8b3dd5-b1c8-4c4c-8bb4-6f6852cf3409
 
   description: |
     Identify the system time via PowerShell

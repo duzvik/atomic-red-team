@@ -4,7 +4,7 @@ display_name: Data Staged
 
 atomic_tests:
 - name: Stage data from Discovery.bat
-  uuid: 0f224a31-b2ab-437b-97e9-b66f99096221
+  uuid: b898c70f-78b6-43c5-96f0-ad05ba28ebd3
 
   description: |
     Utilize powershell to download discovery.bat and save to a local file
@@ -19,7 +19,7 @@ atomic_tests:
 
 atomic_tests:
 - name: Stage data from Discovery.sh
-  uuid: 0f224a31-b2ab-437b-97e9-b66f99096221
+  uuid: 93f09f8f-e8a9-406c-9b0c-7c12b7f53024
 
   description: |
     Utilize curl to download discovery.sh and execute a basic information gathering shell script

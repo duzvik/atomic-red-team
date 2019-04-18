@@ -4,7 +4,7 @@ display_name: Screen Capture
 
 atomic_tests:
 - name: Screencapture
-  uuid: 3382523d-148f-4a27-9052-ddb6fc675a90
+  uuid: 86ea5525-7842-476b-80e9-9dd54887b4d4
 
   description: |
     Use screencapture command to collect a full desktop screenshot
@@ -21,7 +21,7 @@ atomic_tests:
     command: screencapture #{output_file}
 
 - name: Screencapture (silent)
-  uuid: 3382523d-148f-4a27-9052-ddb6fc675a90
+  uuid: c67f8dcc-c4cb-4095-9f8e-b6195fa1b3d6
 
   description: |
     Use screencapture command to collect a full desktop screenshot
@@ -38,7 +38,7 @@ atomic_tests:
     command: screencapture -x #{output_file}
 
 - name: X Windows Capture
-  uuid: 3382523d-148f-4a27-9052-ddb6fc675a90
+  uuid: bb8c6436-1f43-4216-ae38-2f9539deb70a
 
   description: |
     Use xwd command to collect a full desktop screenshot and review file with xwud
@@ -57,7 +57,7 @@ atomic_tests:
       xwud -in #{output_file}
 
 - name: Import
-  uuid: 3382523d-148f-4a27-9052-ddb6fc675a90
+  uuid: 094e584a-b7fc-45f4-9c38-8ee2039bfaaf
 
   description: |
     Use import command to collect a full desktop screenshot

@@ -4,7 +4,7 @@ display_name: Pass the Hash
 
 atomic_tests:
 - name: Mimikatz Pass the Hash
-  uuid: 1f123ca0-2e2d-43fe-aaa1-cef42a1d5876
+  uuid: aea6abf7-a2db-4f24-902a-004129b0d8f2
 
   description: |
     Note: must dump hashes first
@@ -33,7 +33,7 @@ atomic_tests:
       mimikatz # sekurlsa::pth /user:#{user_name} /domain:#{domain} /ntlm:#{ntlm}
 
 - name: Mimikatz Kerberos Ticket Attack
-  uuid: 1f123ca0-2e2d-43fe-aaa1-cef42a1d5876
+  uuid: bbca879a-64a0-4ba0-9975-0d5225bcdb41
 
   description: |
     Similar to PTH, but attacking Kerberos

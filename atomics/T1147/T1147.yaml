@@ -4,7 +4,7 @@ display_name: Hidden Users
 
 atomic_tests:
 - name: Hidden Users
-  uuid: 9dad67cb-7790-46b8-b4e3-2a34bcdcf658
+  uuid: b702d89b-c3f5-4594-8484-e0a42565ba65
 
   description: |
     Add a hidden user on MacOS

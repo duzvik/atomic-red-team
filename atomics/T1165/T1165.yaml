@@ -4,7 +4,7 @@ display_name: Startup Items
 
 atomic_tests:
 - name: Startup Items
-  uuid: e146b46a-3040-4c1d-9033-1d3e6db0f183
+  uuid: 777bfd2d-4c4d-4901-a3a3-b7d407d6bf70
 
   description: |
     Modify or create an file in StartupItems
@@ -20,7 +20,7 @@ atomic_tests:
       1. /Library/StartupItems/StartupParameters.plist
 
 - name: Startup Items (emond rule)
-  uuid: e146b46a-3040-4c1d-9033-1d3e6db0f183
+  uuid: 1d1d69ff-e7cb-472d-bbd0-ab36daba6c84
 
   description: |
     Establish persistence via a rule run by emond daemon at startup, based on https://posts.specterops.io/leveraging-emond-on-macos-for-persistence-a040a2785124

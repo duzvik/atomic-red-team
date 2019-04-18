@@ -4,7 +4,7 @@ display_name: NTFS File Attributes
 
 atomic_tests:
 - name: Alternate Data Streams (ADS)
-  uuid: 0717926f-783e-4bc4-a1cd-15f6d8a8490d
+  uuid: eabb0323-41ca-4322-8f68-6f16b495310c
 
   description: |
     Execute from Alternate Streams

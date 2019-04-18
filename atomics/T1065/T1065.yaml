@@ -4,7 +4,7 @@ display_name: Adversaries may conduct C2 communications over a non-standard port
 
 atomic_tests:
 - name: Testing usage of uncommonly used port with PowerShell
-  uuid: e4ccbadf-d7f5-442f-b33d-02e14f639437
+  uuid: 49e3b4e9-cb24-4e10-9e8c-9132211f786b
 
   description: |
     Testing uncommonly used port utilizing PowerShell
@@ -28,7 +28,7 @@ atomic_tests:
       test-netconnection -ComputerName #{domain} -port #{port}
 
 - name: Testing usage of uncommonly used port
-  uuid: e4ccbadf-d7f5-442f-b33d-02e14f639437
+  uuid: 561c4457-2dfb-48d7-8953-36fa61626dbe
 
   description: |
     Testing uncommonly used port utilizing telnet.

@@ -4,7 +4,7 @@ display_name: Data from Local System
 
 atomic_tests:
 - name: Search macOS Safari Cookies
-  uuid: 33052da1-8949-4920-be5e-714206889e38
+  uuid: b871dbcd-eb65-4e40-95d7-a8d2328e2992
 
   description: |
     This test uses `grep` to search a macOS Safari binaryCookies file for specified values. This was used by CookieMiner malware.

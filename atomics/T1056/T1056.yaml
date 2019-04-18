@@ -4,7 +4,7 @@ display_name: Input Capture
 
 atomic_tests:
 - name: Input Capture
-  uuid: 32825191-7b70-4af5-83ec-2b6f7764e66b
+  uuid: 918dc496-ac54-45cd-878f-cea628adf233
 
   description: |
     Utilize PowerShell and external resource to capture keystrokes

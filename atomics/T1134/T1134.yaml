@@ -4,7 +4,7 @@ display_name: Access Token Manipulation
 
 atomic_tests:
 - name: Access Token Manipulation
-  uuid: 9c50bdb0-a3ac-47e5-8477-ae3a1e508845
+  uuid: e881d672-85c2-4cc4-9bc8-645e95e2a03c
 
   description: |
     Creates a process as another user

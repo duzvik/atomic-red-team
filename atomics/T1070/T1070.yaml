@@ -4,7 +4,7 @@ display_name: Indicator Removal on Host
 
 atomic_tests:
 - name: Clear Logs
-  uuid: e10d5e0d-11e9-4412-b858-0a6b4d30365f
+  uuid: 5754d49a-e88a-4752-a377-84edfbdc70f8
 
   description: |
     Clear Windows Event Logs
@@ -21,7 +21,7 @@ atomic_tests:
       wevtutil cl #{log_name}
 
 - name: FSUtil
-  uuid: e10d5e0d-11e9-4412-b858-0a6b4d30365f
+  uuid: 3848f90f-bee9-4472-aae8-b4298105b1b4
 
   description: |
     Manages the update sequence number (USN) change journal, which provides a persistent log of all changes made to files on the volume.
@@ -33,7 +33,7 @@ atomic_tests:
       fsutil usn deletejournal /D C:
 
 - name: rm -rf
-  uuid: e10d5e0d-11e9-4412-b858-0a6b4d30365f
+  uuid: f9958003-923d-4a43-8d82-7be87bbdccb2
 
   description: |
     Delete system and audit logs
@@ -47,7 +47,7 @@ atomic_tests:
       rm -rf /private/var/audit/*
 
 - name: Overwrite Linux Mail Spool
-  uuid: e10d5e0d-11e9-4412-b858-0a6b4d30365f
+  uuid: 8ede86c6-53e7-4a08-abc9-71d9e313ae84
 
   description: |
     This test overwrites the Linux mail spool of a specified user. This technique was used by threat actor Rocke during the exploitation of Linux web servers.
@@ -64,7 +64,7 @@ atomic_tests:
       echo 0> /var/spool/mail/#{username}
 
 - name: Overwrite Linux Log
-  uuid: e10d5e0d-11e9-4412-b858-0a6b4d30365f
+  uuid: cd18b883-4eff-4c59-ba56-47aca93f6578
 
   description: |
     This test overwrites the specified log. This technique was used by threat actor Rocke during the exploitation of Linux web servers.

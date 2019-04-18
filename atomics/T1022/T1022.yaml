@@ -4,7 +4,7 @@ display_name: Data Encrypted
 
 atomic_tests:
 - name: Data Encrypted with zip and gpg
-  uuid: 72d38cd4-b324-4da9-882c-b027982bcc16
+  uuid: 2deb8781-6815-4889-95f4-6363bc503ec3
 
   description: |
     Encrypt data for exiltration
@@ -27,7 +27,7 @@ atomic_tests:
       ls -l
 
 - name: Compress Data and lock with password for Exfiltration with winrar
-  uuid: 72d38cd4-b324-4da9-882c-b027982bcc16
+  uuid: 611d1a18-dfc4-4a64-ad3f-7b50d873830b
 
   description: |
     Note: Requires winrar installation
@@ -44,7 +44,7 @@ atomic_tests:
       dir
 
 - name: Compress Data and lock with password for Exfiltration with winzip
-  uuid: 72d38cd4-b324-4da9-882c-b027982bcc16
+  uuid: 6b7cae9f-3ef2-4c11-8a1c-b9cfa34e9068
 
   description: |
     Note: Requires winzip installation
@@ -62,7 +62,7 @@ atomic_tests:
       dir
 
 - name: Compress Data and lock with password for Exfiltration with 7zip
-  uuid: 72d38cd4-b324-4da9-882c-b027982bcc16
+  uuid: a285abc9-b1ba-4903-b0e6-ba1bb0077bd7
 
   description: |
     Note: Requires 7zip installation

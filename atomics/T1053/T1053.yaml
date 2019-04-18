@@ -4,7 +4,7 @@ display_name: Scheduled Task
 
 atomic_tests:
 - name: At.exe Scheduled task
-  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+  uuid: 7705d921-bb3c-486c-b008-7161a2c91c55
 
   description: |
     Executes cmd.exe
@@ -18,7 +18,7 @@ atomic_tests:
     command: |
       at 13:20 /interactive cmd
 - name: Scheduled task Local
-  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+  uuid: fd632cd5-30e9-4d7c-ab56-cd38d2137604
 
   description: |
 
@@ -42,7 +42,7 @@ atomic_tests:
 
 #@todo
 # - name: Scheduled task Remote
-  uuid: 2d85ea97-74b6-456c-9b07-32d92cfff14b
+  uuid: ffcb4c4f-6197-467a-92de-a4b6aa6d274a
 
 #   description: |
 #       Create a task on a remote system

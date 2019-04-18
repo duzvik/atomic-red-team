@@ -4,7 +4,7 @@ display_name: Local Job Scheduling
 
 atomic_tests:
 - name: Cron - Replace crontab with referenced file
-  uuid: 37942586-d1db-486a-b1c4-9e44061465b9
+  uuid: cf7fca99-3916-4586-982c-0397d1977a9a
 
   description: |
     This test replaces the current user's crontab file with the contents of the referenced file. This technique was used by numerous IoT automated exploitation attacks.
@@ -31,7 +31,7 @@ atomic_tests:
       echo "* * * * * #{command}" > #{tmp_cron} && crontab #{tmp_cron}
 
 - name: Cron - Add script to cron folder
-  uuid: 37942586-d1db-486a-b1c4-9e44061465b9
+  uuid: 70101cd9-8853-4390-9317-430eb57b02e3
 
   description: |
     This test adds a script to a cron folder configured to execute on a schedule. This technique was used by the threat actor Rocke during the exploitation of Linux web servers.
@@ -58,7 +58,7 @@ atomic_tests:
       echo "#{command}" > /etc/cron.daily/#{cron_script_name}
 
 - name: Event Monitor Daemon Persistence
-  uuid: 37942586-d1db-486a-b1c4-9e44061465b9
+  uuid: ceadb0db-11e3-43e4-8549-3a5e17873885
 
   description: |
     This test adds persistence via a plist to execute via the macOS Event Monitor Daemon. 

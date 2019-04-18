@@ -4,7 +4,7 @@ display_name: CMSTP
 
 atomic_tests:
 - name: CMSTP Executing Remote Scriptlet
-  uuid: 424c4fa6-7506-4f1a-a82b-7822fa2d81a0
+  uuid: 969650ea-cccd-4153-a322-75f6bb188650
 
   description: |
     Adversaries may supply CMSTP.exe with INF files infected with malicious commands
@@ -23,7 +23,7 @@ atomic_tests:
       cmstp.exe /s #{inf_file_path}
 
 - name: CMSTP Executing UAC Bypass
-  uuid: 424c4fa6-7506-4f1a-a82b-7822fa2d81a0
+  uuid: ee283781-8102-49d5-ae35-9d570b86c0c7
 
   description: |
     Adversaries may invoke cmd.exe (or other malicious commands) by embedding them in the RunPreSetupCommandsSection of an INF file

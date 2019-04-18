@@ -5,7 +5,7 @@ attack_link: https://attack.mitre.org/wiki/Technique/T1115
 
 atomic_tests:
 - name: Utilize Clipboard to store or execute commands from
-  uuid: 9e30f427-df0a-4878-96f4-1038b3bc50d7
+  uuid: e1bd4765-8c8f-430c-bcb6-5635d80bab88
 
   description: |
     Add data to clipboard to copy off or execute commands from.
@@ -18,7 +18,7 @@ atomic_tests:
       clip < readme.txt
 
 - name: PowerShell
-  uuid: 9e30f427-df0a-4878-96f4-1038b3bc50d7
+  uuid: b01eb6bd-19a1-4752-9ae4-4dbb4c2cc82e
 
   description: |
     Utilize PowerShell to echo a command to clipboard and execute it

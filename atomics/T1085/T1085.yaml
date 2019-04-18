@@ -3,7 +3,7 @@ attack_technique: T1085
 display_name: Rundll32
 atomic_tests:
 - name: Rundll32 execute JavaScript Remote Payload With GetObject
-  uuid: 77165935-9d59-495a-a2ce-ff0de9f8d2e4
+  uuid: cc6c291d-6f55-4ec1-b9a1-390b6f0ed20d
 
   description: |
     Test execution of a remote script using rundll32.exe

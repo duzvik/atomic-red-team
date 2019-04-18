@@ -4,7 +4,7 @@ display_name: Web Shell
 
 atomic_tests:
 - name: Web Shell Written to Disk
-  uuid: 710edc64-ca75-4106-8899-270d04816148
+  uuid: 2f1f2a68-6119-4f6e-949d-e2e08a51825f
 
   description: |
     This test simulates an adversary leveraging Web Shells by simulating the file modification to disk.

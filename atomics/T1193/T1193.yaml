@@ -4,7 +4,7 @@ display_name: Spearphishing Attachment
 
 atomic_tests:
 - name: Download Phishing Attachment - VBScript
-  uuid: 3cb9fc57-3708-4476-86e2-0555d63f594f
+  uuid: 6ea23861-f187-42ed-8624-1ec658fdbf52
 
   description: |
     The macro-enabled Excel file contains VBScript which opens your default web browser and opens it to [google.com](http://google.com). 

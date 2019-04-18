@@ -4,7 +4,7 @@ display_name: Query Registry
 
 atomic_tests:
 - name: Query Registry
-  uuid: 11fd9750-b0cf-449b-a78b-cb24041423c6
+  uuid: 75360d48-29b9-414c-a2b9-e753a867fad1
 
   description: |
     Query Windows Registry

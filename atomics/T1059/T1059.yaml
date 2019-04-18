@@ -4,7 +4,7 @@ display_name: Command-Line Interface
 
 atomic_tests:
 - name: Command-Line Interface
-  uuid: c3ced9e6-ef33-469a-8117-b3953a1361d1
+  uuid: d85bf7ec-0652-4ea6-b868-d85a999ac851
 
   description: |
     Using Curl to download and pipe a payload to Bash. NOTE: Curl-ing to Bash is generally a bad idea if you don't control the server.

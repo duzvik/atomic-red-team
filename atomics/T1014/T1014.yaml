@@ -4,7 +4,7 @@ display_name: Loadable Kernel Module based Rootkit
 
 atomic_tests:
 - name: Loadable Kernel Module based Rootkit
-  uuid: 9df4c21a-3507-4225-8a00-c549d932da2a
+  uuid: 24873dbe-4580-4bc0-9fb1-2872c5a57d62
 
   description: |
     Loadable Kernel Module based Rootkit
@@ -23,7 +23,7 @@ atomic_tests:
     command: |
       sudo insmod #{rootkit_file}
 - name: Loadable Kernel Module based Rootkit
-  uuid: 9df4c21a-3507-4225-8a00-c549d932da2a
+  uuid: 199919ca-423b-42ac-a8fd-dcda21b0147e
 
   description: |
     Loadable Kernel Module based Rootkit
@@ -43,7 +43,7 @@ atomic_tests:
       sudo modprobe #{rootkit_file}
 
 - name: Windows Signed Driver Rootkit Test
-  uuid: 9df4c21a-3507-4225-8a00-c549d932da2a
+  uuid: 02f78f88-84f6-48bf-98f6-a68c4cc63a5d
 
   description: |
     This test exploits a signed driver to execute code in Kernel.

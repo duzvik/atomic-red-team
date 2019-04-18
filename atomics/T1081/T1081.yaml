@@ -4,7 +4,7 @@ display_name: Credentials in Files
 
 atomic_tests:
 - name: Browser and System credentials
-  uuid: 17a68b07-fe8f-4e97-af58-ac2fe2f1ff7a
+  uuid: b74e62c4-970d-46ee-935e-f2f8eac7bfb8
 
   description: |
     [LaZagne Source](https://github.com/AlessandroZ/LaZagne)
@@ -18,7 +18,7 @@ atomic_tests:
       python2 laZagne.py all
 
 - name: Extract credentials from files
-  uuid: 17a68b07-fe8f-4e97-af58-ac2fe2f1ff7a
+  uuid: f222ce75-4ec1-4c2c-b558-584344ce150a
 
   description: |
     Extracting credentials from files
@@ -36,7 +36,7 @@ atomic_tests:
       grep -riP password #{file_path}
 
 - name: Mimikatz & Kittenz
-  uuid: 17a68b07-fe8f-4e97-af58-ac2fe2f1ff7a
+  uuid: e29967e0-1c4e-47e5-a5ca-db87c4573b7f
 
   description: |
     Mimikatz/kittenz - This will require a Mimikatz executable or invoke-mimikittenz ps module.
@@ -49,7 +49,7 @@ atomic_tests:
       mimikatz.exe
 
 - name: Extracting credentials from files
-  uuid: 17a68b07-fe8f-4e97-af58-ac2fe2f1ff7a
+  uuid: 181a8ace-87a9-4c0d-8b37-cdc1be415308
 
   description: |
     Extracting Credentials from Files

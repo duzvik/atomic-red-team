@@ -4,7 +4,7 @@ display_name: Office Application Startup
 
 atomic_tests:
 - name: DDEAUTO
-  uuid: b0575849-d680-44ae-8d4d-22f2cb5dd6a2
+  uuid: effd00a1-d81c-4499-9907-2781ffdc75dc
 
   description: |
 

@@ -4,7 +4,7 @@ display_name: Obfuscated Files or Information
 
 atomic_tests:
 - name: Decode base64 Data into Script
-  uuid: 5033c859-f68e-40d1-a7e0-91e8d65f6f45
+  uuid: db76af8b-1a54-4bd2-a3dc-cdf1315b8f9d
 
   description: |
     Creates a base64-encoded data file and decodes it into an executable shell script

@@ -3,7 +3,7 @@ attack_technique: T1127
 display_name: Trusted Developer Utilities
 atomic_tests:
 - name: MSBuild Bypass Using Inline Tasks
-  uuid: 14155de3-e1b8-454e-a920-c3582bc20644
+  uuid: 95d4874f-b310-499b-9e32-1375dd33e3c9
 
   description: |
     Executes the code in a project file using. C# Example

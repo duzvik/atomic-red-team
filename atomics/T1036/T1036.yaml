@@ -4,7 +4,7 @@ display_name: Masquerading
 
 atomic_tests:
 - name: Masquerading as Windows LSASS process
-  uuid: 30b294f2-c5ba-4530-86ec-7b578ba09590
+  uuid: ffc51db7-2183-4b2e-8564-e8725e697013
 
   description: |
     Copies cmd.exe, renames it, and launches it to masquerade as an instance of lsass.exe.
@@ -19,7 +19,7 @@ atomic_tests:
       cmd.exe /c %SystemRoot%\Temp\lsass.exe
 
 - name: Masquerading as Linux crond process.
-  uuid: 30b294f2-c5ba-4530-86ec-7b578ba09590
+  uuid: 1210c370-3d80-49e5-8691-2ac3b5e8fd82
 
   description: |
     Copies sh process, renames it as crond, and executes it to masquerade as the cron daemon.

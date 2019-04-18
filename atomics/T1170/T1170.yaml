@@ -4,7 +4,7 @@ display_name: Mshta
 
 atomic_tests:
 - name: Mshta executes JavaScript Scheme Fetch Remote Payload With GetObject
-  uuid: 75e74e1c-b6b0-4809-876e-163e4d192b81
+  uuid: aac8ffe8-d3b5-4ad4-b872-55ee76609fbf
 
   description: |
     Test execution of a remote script using mshta.exe

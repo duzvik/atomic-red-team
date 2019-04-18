@@ -4,7 +4,7 @@ display_name: rc.common
 
 atomic_tests:
 - name: rc.common
-  uuid: 7ea190f5-256d-488c-aad1-dd910b3dbabb
+  uuid: b452c17c-3b06-4f5b-a02a-b33925b62f26
 
   description: |
     Modify rc.common

@@ -4,7 +4,7 @@ display_name: Clear Command History
 
 atomic_tests:
 - name: Clear Bash history (rm)
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: 28667a5c-7dfd-4614-9c66-7d1e8bc68dd9
 
   description: |
     Clears bash history via rm
@@ -17,7 +17,7 @@ atomic_tests:
       rm ~/.bash_history
 
 - name: Clear Bash history (echo)
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: 342a45ac-ae5a-4854-933a-3eb05b7e2623
 
   description: |
     Clears bash history via rm
@@ -30,7 +30,7 @@ atomic_tests:
       echo "" > ~/.bash_history
 
 - name: Clear Bash history (cat dev/null)
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: 48423a59-d906-4023-97fa-b35d72bd0eeb
 
   description: |
     Clears bash history via cat /dev/null
@@ -43,7 +43,7 @@ atomic_tests:
       cat /dev/null > ~/.bash_history
 
 - name: Clear Bash history (ln dev/null)
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: 4bf808fa-b751-48f6-b375-c184c0209a57
 
   description: |
     Clears bash history via a symlink to /dev/null
@@ -56,7 +56,7 @@ atomic_tests:
       ln -sf /dev/null ~/.bash_history
 
 - name: Clear Bash history (truncate)
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: 5b076738-6ad5-4241-92bb-5338240b7a1b
 
   description: |
     Clears bash history via truncate
@@ -68,7 +68,7 @@ atomic_tests:
       truncate -s0 ~/.bash_history
 
 - name: Clear history of a bunch of shells
-  uuid: ad01c2c1-1055-4ddb-9181-5685a7ebbb0d
+  uuid: b9d4e8aa-4328-42d9-8475-6b43993cf6fe
 
   description: |
     Clears the history of a bunch of different shell types by setting the history size to zero

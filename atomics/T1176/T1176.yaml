@@ -4,7 +4,7 @@ display_name: Browser Extensions
 
 atomic_tests:
 - name: Chrome (Developer Mode)
-  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+  uuid: 6a0cd8e3-bc67-4beb-8bed-75802dd21559
 
   description: |
     xxx
@@ -24,7 +24,7 @@ atomic_tests:
       3. Click 'Select'
 
 - name: Chrome (Chrome Web Store)
-  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+  uuid: 6317cc2e-7fe0-4610-b6bc-c5ba215e2b45
 
   description: |
     xxx
@@ -41,7 +41,7 @@ atomic_tests:
       2. Click 'Add to Chrome'
 
 - name: Firefox
-  uuid: 3547b03c-abb8-495b-bdae-8616af17b521
+  uuid: 332d353f-70ff-41b7-b2c8-c96a0d31fa18
 
   description: |
     Create a file called test.wma, with the duration of 30 seconds

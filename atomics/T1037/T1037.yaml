@@ -4,7 +4,7 @@ display_name: Logon Scripts
 
 atomic_tests:
 - name: Logon Scripts
-  uuid: db1f43c6-d998-43ed-bcf2-0ec007bddcbd
+  uuid: 49cbf40c-ac13-4032-b75c-0deb4bbcd1bb
 
   description: |
     Added Via Reg.exe
@@ -24,7 +24,7 @@ atomic_tests:
       REG.exe ADD HKCU\Environment /v UserInitMprLogonScript /t REG_MULTI_SZ /d "#{script_command}"
 
 - name: Logon Scripts - Mac
-  uuid: db1f43c6-d998-43ed-bcf2-0ec007bddcbd
+  uuid: f9196f4c-6ccb-4e93-a8a4-915bce974dd8
 
   description: |
     Mac logon script

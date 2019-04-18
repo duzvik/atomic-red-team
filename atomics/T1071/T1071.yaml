@@ -4,7 +4,7 @@ display_name: Standard Application Layer Protocol
 
 atomic_tests:
 - name: Malicious User Agents
-  uuid: 0220622d-6828-4404-9591-b610f716a450
+  uuid: 8113df29-7662-47a0-b1cf-bff2ddf35f7c
 
   description: |
     This test simulates an infected host beaconing to command and control.
@@ -26,7 +26,7 @@ atomic_tests:
       Invoke-WebRequest #{domain} -UserAgent "*<|>*" | out-null
 
 - name: Malicious User Agents - Nix
-  uuid: 0220622d-6828-4404-9591-b610f716a450
+  uuid: f01dce52-76af-4957-844d-e986e67982dd
 
   description: |
     This test simulates an infected host beaconing to command and control.

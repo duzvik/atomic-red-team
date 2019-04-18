@@ -4,7 +4,7 @@ display_name: Keychain
 
 atomic_tests:
 - name: Keychain
-  uuid: 9f99870d-f719-4256-9c50-6d8044600b7d
+  uuid: ad08e5a8-df24-4422-819b-3b52d7e967b3
 
   description: |
     ### Keychain Files

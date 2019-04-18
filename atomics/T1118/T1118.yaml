@@ -4,7 +4,7 @@ display_name: InstallUtil
 
 atomic_tests:
 - name: InstallUtil uninstall method call
-  uuid: e5837286-2061-4cfa-a509-bc666a2ffc1e
+  uuid: 64096ed1-45f8-4579-aa24-b97fd17e9df5
 
   description: |
     Executes the Uninstall Method

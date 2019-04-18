@@ -4,7 +4,7 @@ display_name: Windows Management Instrumentation Event Subscription
 
 atomic_tests:
 - name: Persistence
-  uuid: 1128d589-1d67-47c7-96c7-dda304deed58
+  uuid: 3923cf31-f50a-43a9-b867-1d53017ae5b9
 
   description: |
     Run from an administrator powershell window
@@ -41,7 +41,7 @@ atomic_tests:
       $FilterToConsumerBinding = New-CimInstance -Namespace root/subscription -ClassName __FilterToConsumerBinding -Property $FilterToConsumerArgs
 
 - name: Persistence Cleanup
-  uuid: 1128d589-1d67-47c7-96c7-dda304deed58
+  uuid: 8c6e8fa8-5f2e-4b37-a9ad-6c2614818f43
 
   description: |
     Run from an administrator powershell window

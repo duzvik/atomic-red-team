@@ -4,7 +4,7 @@ display_name: System Network Connections Discovery
 
 atomic_tests:
 - name: System Network Connections Discovery
-  uuid: 95fb5b98-2a79-4eac-964f-cd6d6fb3848d
+  uuid: ce4cd013-e686-4ea6-a6a1-cb44ae9d48f1
 
   description: |
     Get a listing of network connections.
@@ -20,7 +20,7 @@ atomic_tests:
       net sessions
 
 - name: System Network Connections Discovery with PowerShell
-  uuid: 95fb5b98-2a79-4eac-964f-cd6d6fb3848d
+  uuid: 2579e7f9-9559-4e2a-8920-879d660abd02
 
   description: |
     Get a listing of network connections.
@@ -34,7 +34,7 @@ atomic_tests:
       Get-NetTCPConnection
 
 - name: System Network Connections Discovery Linux & MacOS
-  uuid: 95fb5b98-2a79-4eac-964f-cd6d6fb3848d
+  uuid: b457292a-ac7e-4267-baaa-29e2aa0ee938
 
   description: |
     Get a listing of network connections.

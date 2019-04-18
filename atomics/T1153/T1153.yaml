@@ -4,7 +4,7 @@ display_name: Source
 
 atomic_tests:
 - name: Execute Script using Source
-  uuid: 3eacc07a-dafc-49b9-95d0-cb6d7e338d5d
+  uuid: 30e3ab4f-a7a3-4099-a2ee-402e97c420b3
 
   description: |
     Creates a script and executes it using the source command
@@ -21,7 +21,7 @@ atomic_tests:
       source /tmp/art.sh
 
 - name: Execute Script using Source Alias
-  uuid: 3eacc07a-dafc-49b9-95d0-cb6d7e338d5d
+  uuid: 349c57bd-d945-4d8e-9226-8e8c1d7ca615
 
   description: |
     Creates a script and executes it using the source command's dot alias

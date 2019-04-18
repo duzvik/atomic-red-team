@@ -4,7 +4,7 @@ display_name: DCShadow
 
 atomic_tests:
 - name: DCShadow - Mimikatz
-  uuid: 09eaa76f-3523-4a29-af42-54ab814cd17d
+  uuid: ffd9928f-6f0f-4608-a8ce-7624e37f88be
 
   description: |
     Utilize Mimikatz DCShadow method to simulate behavior of a Domain Controller

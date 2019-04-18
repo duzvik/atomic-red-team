@@ -4,7 +4,7 @@ display_name: Re-Opened Applications
 
 atomic_tests:
 - name: Re-Opened Applications
-  uuid: 3c53c900-dd1a-41ab-bfe5-ea4794074f99
+  uuid: 927e8673-c87b-4142-a8e8-798aa6422645
 
   description: |
     Plist Method
@@ -26,7 +26,7 @@ atomic_tests:
           ~/Library/Preferences/ByHost/com.apple.loginwindow.*.plist
 
 - name: Re-Opened Applications
-  uuid: 3c53c900-dd1a-41ab-bfe5-ea4794074f99
+  uuid: b2439989-2862-4388-817f-322e0a2c8d8d
 
   description: |
     Mac Defaults

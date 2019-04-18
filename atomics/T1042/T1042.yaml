@@ -4,7 +4,7 @@ display_name: Change Default File Association
 
 atomic_tests:
 - name: Change Default File Association
-  uuid: 6fa0d5db-275e-40ba-8f54-20bee7a57cb6
+  uuid: 2f34cb8d-7ac7-44ba-bf6c-b77b5abe9e18
 
   description: |
     Change Default File Association From cmd.exe

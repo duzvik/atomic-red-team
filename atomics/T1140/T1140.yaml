@@ -4,7 +4,7 @@ display_name: Deobfuscate/Decode Files Or Information
 
 atomic_tests:
 - name: Deobfuscate/Decode Files Or Information
-  uuid: 818e610c-4e34-4f37-ad34-8036f94348ee
+  uuid: 6534de0d-1ccf-4e8f-b8bd-47703382a3bb
 
   description: |
     Encode/Decode executable
@@ -25,7 +25,7 @@ atomic_tests:
       certutil.exe -decode file.txt #{executable}
 
 - name: Certutil Rename and Decode
-  uuid: 818e610c-4e34-4f37-ad34-8036f94348ee
+  uuid: 15121ec6-1f27-4169-ace5-3a65d87d27dd
 
   description: |
     Rename certutil and decode a file. This is in reference to latest research by FireEye [here](https://www.fireeye.com/blog/threat-research/2018/09/apt10-targeting-japanese-corporations-using-updated-ttps.html)

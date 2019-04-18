@@ -4,7 +4,7 @@ display_name: Plist Modification
 
 atomic_tests:
 - name: Plist Modification
-  uuid: 69cb2278-b885-449c-82ab-076fb3f0787e
+  uuid: cc21d309-2879-4619-bb36-0fc13ae2527c
 
   description: |
     Modify MacOS plist file in one of two directories

@@ -4,7 +4,7 @@ display_name: Automated Collection
 
 atomic_tests:
 - name: Automated Collection Command Prompt
-  uuid: d231080d-96c8-4ffe-9339-b06e6b8428e6
+  uuid: 3c8b7f7f-7593-478e-830b-78a49ea20d15
 
   description: |
     Automated Collection
@@ -18,7 +18,7 @@ atomic_tests:
       dir c: /b /s .docx | findstr /e .docx
       for /R c: %f in (*.docx) do copy %f c:\temp\
 - name: Automated Collection PowerShell
-  uuid: d231080d-96c8-4ffe-9339-b06e6b8428e6
+  uuid: d87bc09d-c52f-43ac-b63c-cadb3036866e
 
   description: |
     Automated Collection

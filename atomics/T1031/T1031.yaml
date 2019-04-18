@@ -4,7 +4,7 @@ display_name: Modify Existing Service
 
 atomic_tests:
 - name: Modify Fax service to run PowerShell
-  uuid: 3d9d4c72-5351-4ef6-b409-fe9b2885b3f0
+  uuid: d52ab26c-b5a2-477a-9bd6-db99376611ef
 
   description: |
     This test will temporarily modify the service Fax by changing the binPath to PowerShell

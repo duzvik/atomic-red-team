@@ -4,7 +4,7 @@ display_name: Service Execution
 
 atomic_tests:
 - name: Execute a Command as a Service
-  uuid: 5bc0161b-e121-45e2-80ec-83e12bfe6f75
+  uuid: 37e27b9f-b8f9-4bc4-833b-d0ba54846cdc
 
   description: |
     Creates a service specifying an aribrary command and executes it. When executing commands such as PowerShell, the service will report that it did not start correctly even when code executes properly. 

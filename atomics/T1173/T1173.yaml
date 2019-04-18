@@ -4,7 +4,7 @@ display_name: Dynamic Data Exchange
 
 atomic_tests:
 - name: Execute Commands
-  uuid: 97992a9a-6314-4719-ab16-c23209067f84
+  uuid: d209d760-7ef2-4580-bbea-cdc810ff23b9
 
   description: |
     Executes commands via DDE using Microsfot Word

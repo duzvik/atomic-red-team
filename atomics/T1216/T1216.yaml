@@ -4,7 +4,7 @@ display_name: Signed Script Proxy Execution
 
 atomic_tests:
 - name: PubPrn.vbs Signed Script Bypass
-  uuid: e5a757dd-226a-4ed5-a020-92a0e57abc2d
+  uuid: 0eab773e-5cd9-4b0f-9103-f1b543519986
 
   description: |
     Executes the signed PubPrn.vbs script with options to download and execute an arbitrary payload.

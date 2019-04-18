@@ -4,7 +4,7 @@ display_name: Remote System Discovery
 
 atomic_tests:
 - name: Remote System Discovery - net
-  uuid: 9aaebad5-6759-4d55-9a12-4c1f4ac5e83d
+  uuid: a9099533-242a-4b0d-8c30-d686f99acb0d
 
   description: |
     Identify remote systems with net.exe
@@ -19,7 +19,7 @@ atomic_tests:
       net view
 
 - name: Remote System Discover - ping sweep
-  uuid: 9aaebad5-6759-4d55-9a12-4c1f4ac5e83d
+  uuid: 31c74d58-0f04-4690-ad67-fd5dced15f2c
 
   description: |
     Identify remote systems via ping sweep
@@ -33,7 +33,7 @@ atomic_tests:
       for /l %i in (1,1,254) do ping -n 1 -w 100 192.168.1.%i
 
 - name: Remote System Discover - arp
-  uuid: 9aaebad5-6759-4d55-9a12-4c1f4ac5e83d
+  uuid: 226a0fad-c623-4392-84eb-3e655c75b812
 
   description: |
     Identify remote systems via arp
@@ -47,7 +47,7 @@ atomic_tests:
       arp -a
 
 - name: Remote System Discovery - arp nix
-  uuid: 9aaebad5-6759-4d55-9a12-4c1f4ac5e83d
+  uuid: 880f5f24-e3d8-4b91-b213-8d6218dfbafd
 
   description: |
     Identify remote systems via arp
@@ -62,7 +62,7 @@ atomic_tests:
       arp -a | grep -v '^?'
 
 - name: Remote System Discovery - sweep
-  uuid: 9aaebad5-6759-4d55-9a12-4c1f4ac5e83d
+  uuid: 5ca69e26-3f1a-4817-a66c-80afff51ec3c
 
   description: |
     Identify remote systems via ping sweep

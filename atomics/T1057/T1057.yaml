@@ -4,7 +4,7 @@ display_name: Process Discovery
 
 atomic_tests:
 - name: Process Discovery - ps
-  uuid: 4a981b64-32e4-4736-8dbe-d4f2f96787e8
+  uuid: 47f4e3bc-0e08-487c-8864-99c365529777
 
   description: |
     Utilize ps to identify processes

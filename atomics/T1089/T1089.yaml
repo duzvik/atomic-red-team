@@ -4,7 +4,7 @@ display_name: Disabling Security Tools
 
 atomic_tests:
 - name: Disable iptables firewall
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 449780a9-9b63-40d3-8d49-a38a496e66ab
 
   description: |
     Disables the iptables firewall
@@ -25,7 +25,7 @@ atomic_tests:
       fi
 
 - name: Disable syslog
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: abed14dc-2ee3-4b08-82f8-94abcec0e174
 
   description: |
     Disables syslog collection
@@ -44,7 +44,7 @@ atomic_tests:
       fi
 
 - name: Disable Cb Response
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 20d1fe93-390b-40b5-b7ab-a125b831a72c
 
   description: |
     Disable the Cb Response service
@@ -63,7 +63,7 @@ atomic_tests:
       fi
 
 - name: Disable SELinux
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: d7d08d61-109a-4a99-967b-56bc8792c382
 
   description: |
     Disables SELinux enforcement
@@ -75,7 +75,7 @@ atomic_tests:
       setenforce 0
 
 - name: Disable Carbon Black Response
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 7264eaf9-b669-4228-b82b-793b1b895ed4
 
   description: |
     Disables Carbon Black Response
@@ -87,7 +87,7 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/com.carbonblack.daemon.plist
 
 - name: Disable LittleSnitch
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 54ec2291-9cca-4634-8f77-6e6f79b44a26
 
   description: |
     Disables LittleSnitch
@@ -99,7 +99,7 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/at.obdev.littlesnitchd.plist
 
 - name: Disable OpenDNS Umbrella
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 535fe241-bf2a-4823-bcc1-58dfeeb2902c
 
   description: |
     Disables OpenDNS Umbrella
@@ -111,7 +111,7 @@ atomic_tests:
       sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist
 
 - name: Unload Sysmon Filter Driver
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: b0c2c662-75bf-4ff1-a216-a86b550c3555
 
   description: |
     Unloads the Sysinternals Sysmon filter driver without stopping the Sysmon service. 
@@ -128,7 +128,7 @@ atomic_tests:
       fltmc.exe unload #{sysmon_driver}
 
 - name: Disable Windows IIS HTTP Logging
-  uuid: fb432281-a78f-481d-8a11-fcf498f43db6
+  uuid: 31aeec43-c659-4369-9439-3764a276e957
 
   description: |
     Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union). 

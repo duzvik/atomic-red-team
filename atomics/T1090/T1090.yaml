@@ -4,7 +4,7 @@ display_name: Connection Proxy
 
 atomic_tests:
 - name: Connection Proxy
-  uuid: 38f110d5-6522-4244-ae87-1f73891f4212
+  uuid: d3e2662a-7b58-4a4a-b54c-622c9d4e197e
 
   description: |
     Enable traffic redirection.

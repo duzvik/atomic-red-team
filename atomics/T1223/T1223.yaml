@@ -4,7 +4,7 @@ display_name: Compiled HTML File
 
 atomic_tests:
 - name: Compiled HTML Help Local Payload
-  uuid: 2a377927-a773-49aa-a6c0-2d5882894a53
+  uuid: af33b854-87b9-4bd8-8003-ad9707e182db
 
   description: |
     Uses hh.exe to execute a local compiled HTML Help payload.
@@ -25,7 +25,7 @@ atomic_tests:
 
 # @todo  Can't open file
 # - name: Compiled HTML Help Remote Payload
-  uuid: 2a377927-a773-49aa-a6c0-2d5882894a53
+  uuid: 6955a96b-83a8-4400-a718-534f147709b5
 
 #   description: |
 #     Uses hh.exe to execute a remote compiled HTML Help payload.

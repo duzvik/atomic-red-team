@@ -4,7 +4,7 @@ display_name: Application Shimming
 
 atomic_tests:
 - name: Application Shim Installation
-  uuid: f945bb48-ff79-46cf-9698-cbb2b4093357
+  uuid: 9cf510cc-a259-4af4-9843-8e95a29bba4e
 
   description: |
     This test injects a DLL into a custom application

@@ -4,7 +4,7 @@ display_name: System Network Configuration Discovery
 
 atomic_tests:
 - name: System Network Configuration Discovery
-  uuid: c5419c90-610c-47b1-835b-05d00ca99871
+  uuid: 04762fbb-3d0f-4dcf-9cab-daf6d4269ada
 
   description: |
     Identify network configuration information
@@ -22,7 +22,7 @@ atomic_tests:
       net config
 
 - name: System Network Configuration Discovery
-  uuid: c5419c90-610c-47b1-835b-05d00ca99871
+  uuid: 37ede3e9-a4c8-4a85-941d-6efdcfc50248
 
   description: |
     Identify network configuration information

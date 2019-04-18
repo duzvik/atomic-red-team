@@ -4,7 +4,7 @@ display_name: Netsh Helper DLL
 
 atomic_tests:
 - name: Netsh Helper DLL Registration
-  uuid: ebe65882-1f06-4bf9-9e72-7b0520cf5847
+  uuid: d9a48d01-5473-4088-b250-c3480a3faecb
 
   description: |
     Netsh interacts with other operating system components using dynamic-link library (DLL) files

@@ -4,7 +4,7 @@ display_name: Hypervisor
 
 atomic_tests:
 - name: Installing Hyper-V Feature
-  uuid: 9d8b17fd-6922-49a2-9bcc-fe2c7d705fad
+  uuid: 2be372c3-eb4c-4704-8870-c9a015679c97
 
   description: |
     PowerShell command to check if Hyper-v is installed .

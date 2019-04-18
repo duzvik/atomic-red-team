@@ -4,7 +4,7 @@ display_name: System Owner/User Discovery
 
 atomic_tests:
 - name: System Owner/User Discovery
-  uuid: 26002476-aee9-4d93-b587-a68df38869b1
+  uuid: 5fc68cd6-d899-4189-a086-b1cf2071b42c
 
   description: |
     Identify System owner or users on an endpoint
@@ -31,7 +31,7 @@ atomic_tests:
       @FOR /F %n in (computers.txt) DO @FOR /F "tokens=1,2" %i in ('qwinsta /server:%n ^| findstr "Active Disc"') do @echo %i | find /v "#" | find /v "console" || echo %j > usernames.txt
 
 - name: System Owner/User Discovery
-  uuid: 26002476-aee9-4d93-b587-a68df38869b1
+  uuid: 7cad6fd2-6888-4661-9ae0-abea9bbf4a67
 
   description: |
     Identify System owner or users on an endpoint

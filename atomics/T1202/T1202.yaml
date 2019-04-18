@@ -4,7 +4,7 @@ display_name: Indirect Command Execution
 
 atomic_tests:
 - name: Indirect Command Execution - pcalua.exe
-  uuid: 84ad085d-7dde-4320-84be-baa41569ae70
+  uuid: e73a6d3f-3588-49a5-9bb3-f969fe2e5e45
 
   description: |
     The Program Compatibility Assistant (pcalua.exe) may invoke the execution of programs and commands from a Command-Line Interface.
@@ -36,7 +36,7 @@ atomic_tests:
       pcalua.exe -a #{payload_cpl_path}
 
 - name: Indirect Command Execution - forfiles.exe
-  uuid: 84ad085d-7dde-4320-84be-baa41569ae70
+  uuid: 07037a35-8d67-41be-87d4-ad0b10cbc5c2
 
   description: |
     forfiles.exe may invoke the execution of programs and commands from a Command-Line Interface.

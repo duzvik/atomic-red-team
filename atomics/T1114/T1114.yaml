@@ -5,7 +5,7 @@ attack_link: https://attack.mitre.org/wiki/Technique/T1114
 
 atomic_tests:
 - name: T1114 Email Collection with PowerShell
-  uuid: 16dc0f28-ea62-45de-9edb-823ae0ee46e9
+  uuid: 173aeb46-7468-4e88-a895-1f3e563f521a
 
 
   description: |

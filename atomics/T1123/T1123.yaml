@@ -4,7 +4,7 @@ display_name: Audio Capture
 
 atomic_tests:
 - name: SourceRecorder via Windows command prompt
-  uuid: d3669b77-b22b-407d-9a7e-264f3229f67c
+  uuid: d39189ff-eee3-42b0-8040-d74232a151d3
 
   description: |
     Create a file called test.wma, with the duration of 30 seconds
@@ -29,7 +29,7 @@ atomic_tests:
       SoundRecorder /FILE #{output_file} /DURATION #{duration_hms}
 
 - name: PowerShell Cmdlet via Windows command prompt
-  uuid: d3669b77-b22b-407d-9a7e-264f3229f67c
+  uuid: d03ffce8-bb9c-442b-ba15-1793a524fe80
 
   description: |
     [AudioDeviceCmdlets](https://github.com/cdhunt/WindowsAudioDevice-Powershell-Cmdlet)
