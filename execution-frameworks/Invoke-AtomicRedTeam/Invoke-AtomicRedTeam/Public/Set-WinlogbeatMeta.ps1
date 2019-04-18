@@ -10,15 +10,15 @@
 #>
 
 function Set-WinlogbeatMeta {
-    Param(
-        [Parameter(Mandatory = $true,
-            Position = 0,
-            ValueFromPipelineByPropertyName = $true,
-            ParameterSetName = 'technique')]
-        [ValidateNotNullOrEmpty()]
-        [string]
-        $Name
-    )
+    Param
+     (
+          [Parameter(Mandatory=$true, Position=0)]
+          [string] $Name,
+          [Parameter(Mandatory=$true, Position=1)]
+          [string] $UUID,
+          [Parameter(Mandatory=$true, Position=2)]
+          [string] $Rule
+     )
     Begin { Write-Debug -Message "Setting winlogbeat meta field to $Name" }
 
 
@@ -34,8 +34,8 @@ function Set-WinlogbeatMeta {
         $yaml = ConvertFrom-YAML $content
         #$yaml.fields.metta_mitre_attack_technique = 'T1085'
         $yaml.fields.metta_techniquue = $Name
-        #$yaml.fields.metta_rule_name = 'Rundll32 execute JavaScript Remote Payload With GetObject'
-        #$yaml.fields.metta_rule_uuid = '2ce4489b-ca49-452f-bfd1-e7450763de60'
+        $yaml.fields.metta_rule_name = $Rule
+        $yaml.fields.metta_rule_uuid = $Uuid
 
         $new_config = ConvertTo-YAML $yaml
         $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
