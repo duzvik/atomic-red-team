@@ -16,12 +16,12 @@ atomic_tests:
     command_to_execute:
       description: Thing to Run
       type: Path
-      default: C:\Path\AtomicRedTeam.exe
+      default: C:\AtomicRedTeam\atomics\T1050\bin\AtomicService.exe
 
   executor:
     name: command_prompt
     command: |
-        REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /t REG_SZ /F /D "#{command_to_execute}"
+        REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /t REG_SZ /F /D "#{command_to_execute}" /f
         REG DELETE "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /f
 - name: Reg Key RunOnce
   uuid: 87649c27-296c-42a9-8795-5bf327e51449
@@ -41,7 +41,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-        REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /d "#{thing_to_execute}"
+        REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /d "#{thing_to_execute}" /f
         REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /f
 - name: PowerShell Registry RunOnce
   uuid: 2ea9f446-41d7-4d34-9cd6-5c1d0ad2ae60
