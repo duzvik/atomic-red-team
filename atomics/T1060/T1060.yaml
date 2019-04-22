@@ -82,7 +82,7 @@ atomic_tests:
   executor:
     name: powershell
     command: |
-        $TargetFile = "$env:SystemRoot\System32\#{thing_to_execute}"
+        $TargetFile = "#{thing_to_execute}"
         $ShortcutFile = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Notepad.lnk"
         $WScriptShell = New-Object -ComObject WScript.Shell
         $Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
