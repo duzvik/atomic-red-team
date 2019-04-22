@@ -21,7 +21,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-        REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /t REG_SZ /F /D "#{command_to_execute}" /f
+        REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /t REG_SZ /F /D "#{command_to_execute}"
         REG DELETE "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Atomic Red Team" /f
 - name: Reg Key RunOnce
   uuid: 87649c27-296c-42a9-8795-5bf327e51449
