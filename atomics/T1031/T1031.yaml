@@ -19,4 +19,4 @@ atomic_tests:
       sc stop Spooler
       sc config Spooler binPath= "calc.exe"
       sc start Spooler
-      sc config Spooler binPath= "C:\Windows\System32\spoolsv.exe
+      sc config Spooler binPath= "C:\Windows\System32\spoolsv.exe"
