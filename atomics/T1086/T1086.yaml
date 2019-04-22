@@ -62,7 +62,7 @@ atomic_tests:
 
 # @todo need to be fixed
 # - name: Mimikatz - Cradlecraft PsSendKeys
-  uuid: c870a7d3-4a0d-4da8-a8cc-f76e4db74160
+#  uuid: c870a7d3-4a0d-4da8-a8cc-f76e4db74160
 
 #   description: |
 #     Run mimikatz via PsSendKeys
@@ -78,7 +78,7 @@ atomic_tests:
 
 #  @todo need to be fixed
 # - name: Invoke-AppPathBypass
-  uuid: b245bb1d-a63b-4879-9f24-708682834ba9
+#  uuid: b245bb1d-a63b-4879-9f24-708682834ba9
 
 #   description: |
 #     Note: Windows 10 only
@@ -127,7 +127,7 @@ atomic_tests:
 
 # @todo need to be fixed
 # - name: Powershell MsXml COM object - no prompt
-  uuid: 7fa4b46c-23bf-4097-bb32-3bec4ae2a0eb
+#  uuid: 7fa4b46c-23bf-4097-bb32-3bec4ae2a0eb
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -150,7 +150,7 @@ atomic_tests:
 
 # @todo
 # - name: Powershell MsXml COM object - with prompt
-  uuid: 7793aa66-51aa-4c18-ad7c-d55d6fede25e
+#  uuid: 7793aa66-51aa-4c18-ad7c-d55d6fede25e
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -173,7 +173,7 @@ atomic_tests:
 
 # @todo
 # - name: Powershell XML requests
-  uuid: 53558992-2ce2-489e-bb1e-52f5cbc3a97d
+#  uuid: 53558992-2ce2-489e-bb1e-52f5cbc3a97d
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -195,7 +195,7 @@ atomic_tests:
 
 #@todo
 # - name: Powershell invoke mshta.exe download
-  uuid: 16ac6f4b-24fd-4431-9325-310c0af6324f
+#  uuid: 16ac6f4b-24fd-4431-9325-310c0af6324f
 
 #   description: |
 #     Provided by https://github.com/mgreen27/mgreen27.github.io
@@ -233,7 +233,7 @@ atomic_tests:
 
 #@todo
 # - name: PowerShell Fileless Script Execution
-  uuid: 06648f54-1d74-4e99-a9a4-3fd227da26b4
+#  uuid: 06648f54-1d74-4e99-a9a4-3fd227da26b4
 
 #   description: |
 #    Execution of a PowerShell payload from the Windows Registry similar to that seen in fileless malware infections.

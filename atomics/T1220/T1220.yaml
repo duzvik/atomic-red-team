@@ -47,7 +47,7 @@ atomic_tests:
 
 #@todo
 # - name: WMIC bypass using local XSL file
-  uuid: d3511f3f-0119-4a6c-9eeb-196d430d2bb3
+#  uuid: d3511f3f-0119-4a6c-9eeb-196d430d2bb3
 
 #   description: |
 #     Executes the code specified within a XSL script using a local payload.
@@ -68,7 +68,7 @@ atomic_tests:
 #      wmic.exe #{wmic_command} /FORMAT:#{local_xsl_file}
 #
 # - name: WMIC bypass using remote XSL file
-  uuid: 0eab58e0-0331-4a87-90c8-94fdb3efc52a
+#  uuid: 0eab58e0-0331-4a87-90c8-94fdb3efc52a
 
 #   description: |
 #     Executes the code specified within a XSL script using a remote payload.

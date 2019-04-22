@@ -25,7 +25,7 @@ atomic_tests:
 
 # @todo  Can't open file
 # - name: Compiled HTML Help Remote Payload
-  uuid: 6955a96b-83a8-4400-a718-534f147709b5
+#  uuid: 6955a96b-83a8-4400-a718-534f147709b5
 
 #   description: |
 #     Uses hh.exe to execute a remote compiled HTML Help payload.
