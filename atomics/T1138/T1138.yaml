@@ -15,4 +15,4 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      sdbinst.exe AtomicShimx86.sdb
+      sdbinst.exe  C:\AtomicRedTeam\atomics\T1138\src\AtomicShimx86.sdb
