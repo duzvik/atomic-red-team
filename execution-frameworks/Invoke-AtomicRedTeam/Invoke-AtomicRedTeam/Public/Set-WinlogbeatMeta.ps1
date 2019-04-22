@@ -25,7 +25,8 @@ function Set-WinlogbeatMeta {
     Process
     {
         Write-Verbose -Message 'Attempting to update winlogbeat meta'
-        Stop-Service winlogbeat
+        Start-Sleep -Seconds 60
+        #Stop-Service winlogbeat
         # Import-Module C:\ps-yaml\powershell-yaml.psm1
         $config_path = 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.yml'
         [string[]]$fileContent = Get-Content $config_path
@@ -40,8 +41,9 @@ function Set-WinlogbeatMeta {
         $new_config = ConvertTo-YAML $yaml
         $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
         [System.IO.File]::WriteAllLines($config_path, $new_config, $Utf8NoBomEncoding)
-        Start-Service winlogbeat
+        #Start-Service winlogbeat
+        Restart-Service winlogbeat
         Write-Verbose -Message "Done!"
-        Start-Sleep -Seconds 5
+        #Start-Sleep -Seconds 5
     }
 }
