@@ -14,6 +14,6 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      reg import ..\src\COMHijack.reg
+      reg import C:\AtomicRedTeam\atomics\T1122\src\COMHijack.reg
       certutil.exe -CAInfo
-      reg import ..\src\COMHijackCleanup.reg
+      reg import C:\AtomicRedTeam\atomics\T1122\src\COMHijackCleanup.reg
