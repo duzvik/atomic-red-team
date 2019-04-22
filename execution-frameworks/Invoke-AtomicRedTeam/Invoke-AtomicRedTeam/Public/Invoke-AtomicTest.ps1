@@ -129,6 +129,7 @@ function Invoke-AtomicTest {
                                 continue
                             }
                         } # End of executor switch
+                        Start-Sleep -Seconds 30
                     } # End of if ShouldProcess block
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique

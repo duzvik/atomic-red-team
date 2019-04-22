@@ -41,7 +41,7 @@ function Set-WinlogbeatMeta {
         $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
         [System.IO.File]::WriteAllLines($config_path, $new_config, $Utf8NoBomEncoding)
         Start-Service winlogbeat
-        Start-Sleep -Seconds 3
+        Start-Sleep -Seconds 5
         Write-Verbose -Message "Done!"
     }
 }
