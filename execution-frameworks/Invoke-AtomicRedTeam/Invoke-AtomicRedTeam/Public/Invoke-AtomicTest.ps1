@@ -106,8 +106,12 @@ function Invoke-AtomicTest {
                     Write-Information -MessageData $finalCommand -Tags 'Command'
                 }
                 else {
-                    Write-Verbose -Message 'Set Winlogbeat Meta field'
-                    Set-WinlogbeatMeta  -Name  $technique.attack_technique.ToString() -UUID $test.uuid -Rule $test.name
+                    $test_technique = $technique.attack_technique.ToString()
+                    $test_uuid = $test.uuid
+                    $test_name = $test.name
+
+                    Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
+                    Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
 
                     Write-Verbose -Message 'Invoking Atomic Tests using defined executor'
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
