@@ -16,7 +16,7 @@ atomic_tests:
     helper_file:
       description: Path to DLL
       type: Path
-      default: C:\Path\file.dll
+      default: C:\AtomicRedTeam\tool\NetshHelperBeacon.dll
 
   executor:
     name: command_prompt
