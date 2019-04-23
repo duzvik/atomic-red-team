@@ -16,7 +16,7 @@ function Set-SysmonLabel {
   	exit
   }
   $new_config_file = (get-item $path).Directory.Fullname
-  $new_config_file = "new_config_file/config_$uuid.xml"
+  $new_config_file = "$new_config_file/config_$uuid.xml"
 
   #try extract current uuid
   $text = (Get-Content $path -Raw)
@@ -29,7 +29,7 @@ function Set-SysmonLabel {
     Write-Verbose "Found $existed_uuid in config, lets replace it"
     $text -replace "`"mitre_test_uuid=$existed_uuid,","`"mitre_test_uuid=$uuid,"| Set-Content -path $new_config_file
   }
-  Write-Verbose "Done!"
+  Write-Verbose "Done! 'C:\Program Files (x86)\Simplerity\SimplerityMon\SimplerityMon64.exe' -c $new_config_file"
   & 'C:\Program Files (x86)\Simplerity\SimplerityMon\SimplerityMon64.exe' -c $new_config_file
   return $true
 }
