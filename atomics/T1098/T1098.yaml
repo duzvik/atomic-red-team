@@ -1,3 +1,4 @@
+
 ---
 attack_technique: T1098
 display_name: Account Manipulation
@@ -27,5 +28,7 @@ atomic_tests:
           if($member -like "*Administrator*") {
               Rename-LocalUser -Name $member.Name -NewName "HaHaHa_$x$y$z$w"
               Write-Host "Successfully Renamed Administrator Account on" $hostname
+              #rollback
+              Rename-LocalUser -Name HaHaHa_$x$y$z$w -NewName $member.Name
               }
           }
