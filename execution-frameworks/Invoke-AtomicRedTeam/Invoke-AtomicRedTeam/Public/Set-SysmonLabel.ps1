@@ -16,7 +16,7 @@ function Set-SysmonLabel {
   	exit
   }
   $new_config_file = (get-item $path).Directory.Fullname
-  $new_config_file = "$new_config_file/config_$uuid.xml"
+  $new_config_file = "$new_config_file\config_$uuid.xml"
 
   #try extract current uuid
   $text = (Get-Content $path -Raw)
