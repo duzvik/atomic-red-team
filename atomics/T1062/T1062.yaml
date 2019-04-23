@@ -3,34 +3,35 @@ attack_technique: T1062
 display_name: Hypervisor
 
 atomic_tests:
-# - name: Installing Hyper-V Feature
-#   uuid: 2be372c3-eb4c-4704-8870-c9a015679c97
-#
-#   description: |
-#     PowerShell command to check if Hyper-v is installed .
-#     Install Hyper-V feature.
-#     Create a New-VM
-#
-#   supported_platforms:
-#     - windows
-#
-#   input_arguments:
-#     hostname:
-#       description: Host to query to see if Hyper-V feature is installed.
-#       type: string
-#       default: test-vm
-#     vm_name:
-#       description: Create a new VM.
-#       type: string
-#       default: testvm
-#     file_location:
-#       description: Location of new VHDX file
-#       type: string
-#       default: C:\Temp\test.vhdx
-#
-#   executor:
-#     name: powershell
-#     command: |
-#       Get-WindowsFeature -Name Hyper-V -ComputerName #{hostname}
-#       Install-WindowsFeature -Name Hyper-V -ComputerName #{hostname} -IncludeManagementTools
-#       New-VM -Name #{vm_name} -MemoryStartupBytes 1GB -NewVHDPath #{file_location} -NewVHDSizeBytes 21474836480
+- name: Installing Hyper-V Feature
+  uuid: 2be372c3-eb4c-4704-8870-c9a015679c97
+
+  description: |
+    PowerShell command to check if Hyper-v is installed .
+    Install Hyper-V feature.
+    Create a New-VM
+
+  supported_platforms:
+    - windows
+
+  input_arguments:
+    hostname:
+      description: Host to query to see if Hyper-V feature is installed.
+      type: string
+      default: test-vm
+    vm_name:
+      description: Create a new VM.
+      type: string
+      default: testvm
+    file_location:
+      description: Location of new VHDX file
+      type: string
+      default: C:\Temp\test.vhdx
+
+  executor:
+    name: powershell
+    command: |
+      #Get-WindowsFeature -Name Hyper-V -ComputerName #{hostname}
+      #Install-WindowsFeature -Name Hyper-V -ComputerName #{hostname} -IncludeManagementTools
+      #New-VM -Name #{vm_name} -MemoryStartupBytes 1GB -NewVHDPath #{file_location} -NewVHDSizeBytes 21474836480
+      Write-Host "todo"
