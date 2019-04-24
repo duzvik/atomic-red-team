@@ -21,7 +21,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      REG.exe ADD HKCU\Environment /v UserInitMprLogonScript /t REG_MULTI_SZ /d "#{script_command}"
+      REG.exe ADD HKCU\Environment /v UserInitMprLogonScript /t REG_MULTI_SZ /d "#{script_command}" /F
 
 - name: Logon Scripts - Mac
   uuid: f9196f4c-6ccb-4e93-a8a4-915bce974dd8
