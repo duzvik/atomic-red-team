@@ -117,8 +117,7 @@ function Invoke-AtomicTest {
                     $test_uuid = $test.uuid
                     $test_name = $test.name
 
-                    if ($Uuid) {
-                      if ($Uuid != $test_uuid) {
+                    if ($Uuid -and ($Uuid -ne $test_uuid)) {
                         continue
                       }
                     }
