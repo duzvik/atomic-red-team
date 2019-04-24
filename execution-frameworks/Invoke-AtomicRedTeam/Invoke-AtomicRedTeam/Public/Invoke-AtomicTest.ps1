@@ -34,7 +34,7 @@ function Invoke-AtomicTest {
             ValueFromPipelineByPropertyName = $true,
             ParameterSetName = 'technique')]
         [string]
-        $Uuid
+        $Uuid,
 
         [Parameter(Mandatory = $false,
             Position = 2,
