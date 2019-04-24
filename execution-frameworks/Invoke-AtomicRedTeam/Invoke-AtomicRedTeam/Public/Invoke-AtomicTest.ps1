@@ -119,8 +119,8 @@ function Invoke-AtomicTest {
 
                     if ($Uuid -and ($Uuid -ne $test_uuid)) {
                         continue
-                      }
                     }
+                    
                     Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
                     #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
                     Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
