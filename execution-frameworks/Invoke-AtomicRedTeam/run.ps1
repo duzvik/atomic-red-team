@@ -13,10 +13,12 @@ Param
 (
   [Parameter(Mandatory=$true, Position=0)]
   [string] $Test
+  [Parameter(Mandatory=$false, Position=1)]
+  [string] $Uuid
 )
 
 Import-Module C:\AtomicRedTeam\execution-frameworks\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam.psm1
 $t= Get-AtomicTechnique -Path "C:\AtomicRedTeam\atomics\$Test\$Test.yaml"
-Invoke-AtomicTest $t -Verbose
+Invoke-AtomicTest $t $Uuid -Verbose
 
 Write-Host "[$Test] Execution finished!"

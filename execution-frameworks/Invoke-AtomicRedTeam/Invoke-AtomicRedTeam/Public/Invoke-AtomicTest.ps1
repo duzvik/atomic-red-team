@@ -33,6 +33,13 @@ function Invoke-AtomicTest {
             Position = 1,
             ValueFromPipelineByPropertyName = $true,
             ParameterSetName = 'technique')]
+        [string]
+        $Uuid
+
+        [Parameter(Mandatory = $false,
+            Position = 2,
+            ValueFromPipelineByPropertyName = $true,
+            ParameterSetName = 'technique')]
         [switch]
         $GenerateOnly
     )
@@ -110,6 +117,11 @@ function Invoke-AtomicTest {
                     $test_uuid = $test.uuid
                     $test_name = $test.name
 
+                    if($Uuid{
+                      if($Uuid !=   $test_uuid){
+                        continue
+                      }
+                    }
                     Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
                     #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
                     Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
@@ -118,6 +130,7 @@ function Invoke-AtomicTest {
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
                         switch ($test.executor.name) {
                             "command_prompt" {
+                                Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                                 Write-Verbose -Message "Command Prompt:`n $finalCommand"
                                 Write-Information -MessageData "Command Prompt:`n $finalCommand" -Tags 'AtomicTest'
                                 $execCommand = $finalCommand.Split("`n")
@@ -127,8 +140,10 @@ function Invoke-AtomicTest {
                             "powershell" {
                                 Write-Verbose -Message "PowerShell:`n $finalCommand"
                                 Write-Information -MessageData "PowerShell`n $finalCommand" -Tags 'AtomicTest'
+                                Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                                 $execCommand = "Invoke-Command -ScriptBlock {$finalCommand}"
                                 Invoke-Expression $execCommand
+                                Start-Process -FilePath calc.exe -ArgumentList stop-uuid=$test_uuid
                                 continue
                             }
                             default {
