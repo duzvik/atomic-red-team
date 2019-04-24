@@ -118,12 +118,14 @@ function Invoke-AtomicTest {
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
                         switch ($test.executor.name) {
                             "command_prompt" {
+                                Write-Verbose -Message "Command Prompt:`n $finalCommand"
                                 Write-Information -MessageData "Command Prompt:`n $finalCommand" -Tags 'AtomicTest'
                                 $execCommand = $finalCommand.Split("`n")
                                 $execCommand | ForEach-Object { Invoke-Expression "cmd.exe /c `"$_`" " }
                                 continue
                             }
                             "powershell" {
+                                Write-Verbose -Message "PowerShell:`n $finalCommand"
                                 Write-Information -MessageData "PowerShell`n $finalCommand" -Tags 'AtomicTest'
                                 $execCommand = "Invoke-Command -ScriptBlock {$finalCommand}"
                                 Invoke-Expression $execCommand
