@@ -203,27 +203,28 @@ atomic_tests:
 #       echo "test" > :#{ads_filename}
 #       dir /s /r | find ":$DATA"
 
-- name: Create ADS PowerShell
-  uuid: 6570fed0-f72a-4f27-97e7-10bc43ab7838
-
-  description: |
-    Create an Alternate Data Stream with PowerShell. Write access is required.
-  supported_platforms:
-    - windows
-  input_arguments:
-    file_name:
-      description: File name of file to create ADS on.
-      type: string
-      default: test.txt
-    ads_filename:
-      description: Name of ADS file.
-      type: string
-      default: adstest.txt
-  executor:
-    name: powershell
-    command: |
-      cd C:\Windows\Temp
-      echo "test" > #{file_name} | set-content -path test.txt -stream #{ads_filename} -value "test"
-      set-content -path #{file_name} -stream #{ads_filename} -value "test2"
-      set-content -path C:\Windows\Temp -stream #{ads_filename} -value "test3"
-      ls -Recurse | %{ gi $_.Fullname -stream *} | where stream -ne ':$Data' | Select-Object pschildname
+#@todo
+# - name: Create ADS PowerShell
+#   uuid: 6570fed0-f72a-4f27-97e7-10bc43ab7838
+#
+#   description: |
+#     Create an Alternate Data Stream with PowerShell. Write access is required.
+#   supported_platforms:
+#     - windows
+#   input_arguments:
+#     file_name:
+#       description: File name of file to create ADS on.
+#       type: string
+#       default: test.txt
+#     ads_filename:
+#       description: Name of ADS file.
+#       type: string
+#       default: adstest.txt
+#   executor:
+#     name: powershell
+#     command: |
+#       cd C:\Windows\Temp
+#       echo "test" > #{file_name} | set-content -path test.txt -stream #{ads_filename} -value "test"
+#       set-content -path #{file_name} -stream #{ads_filename} -value "test2"
+#       set-content -path C:\Windows\Temp -stream #{ads_filename} -value "test3"
+#       ls -Recurse | %{ gi $_.Fullname -stream *} | where stream -ne ':$Data' | Select-Object pschildname

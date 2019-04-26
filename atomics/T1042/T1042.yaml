@@ -23,4 +23,4 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      cmd.exe /c assoc #{extension_to_change}="#{target_exenstion_handler}"
+      cmd.exe /c assoc #{extension_to_change}="C:\Program Files\Windows Media Player\wmplayer.exe"
