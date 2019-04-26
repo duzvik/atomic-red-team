@@ -120,16 +120,16 @@ function Invoke-AtomicTest {
                     if ($Uuid -and ($Uuid -ne $test_uuid)) {
                         continue
                     }
-                    
+
                     Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
                     #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
                     Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
                     Start-Sleep -Seconds 5
+                    Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                     Write-Verbose -Message 'Invoking Atomic Tests using defined executor'
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
                         switch ($test.executor.name) {
                             "command_prompt" {
-                                Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                                 Write-Verbose -Message "Command Prompt:`n $finalCommand"
                                 Write-Information -MessageData "Command Prompt:`n $finalCommand" -Tags 'AtomicTest'
                                 $execCommand = $finalCommand.Split("`n")
@@ -142,7 +142,6 @@ function Invoke-AtomicTest {
                                 Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                                 $execCommand = "Invoke-Command -ScriptBlock {$finalCommand}"
                                 Invoke-Expression $execCommand
-                                Start-Process -FilePath calc.exe -ArgumentList stop-uuid=$test_uuid
                                 continue
                             }
                             default {
@@ -151,6 +150,7 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
+                    Start-Process -FilePath calc.exe -ArgumentList stop-uuid=$test_uuid
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
 
