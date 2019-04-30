@@ -121,9 +121,9 @@ function Invoke-AtomicTest {
                         continue
                     }
 
-                    Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
+                    #Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
                     #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
-                    Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
+                    #Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
                     Start-Sleep -Seconds 5
                     Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
                     Write-Verbose -Message 'Invoking Atomic Tests using defined executor'
@@ -150,6 +150,7 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
+                    Start-Sleep -Seconds 5
                     Start-Process -FilePath calc.exe -ArgumentList stop-uuid=$test_uuid
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
