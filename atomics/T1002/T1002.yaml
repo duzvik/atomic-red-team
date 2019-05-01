@@ -14,7 +14,7 @@ atomic_tests:
     input_file:
       description: Path that should be compressed into our output file
       type: Path
-      default: C:\AtomicRedTeam\atomics\*
+      default: C:\AtomicRedTeam\atomics\T1002\*
     output_file:
       description: Path where resulting compressed data should be placed
       type: Path
@@ -35,15 +35,15 @@ atomic_tests:
     input_file:
       description: Path that should be compressed into our output file
       type: Path
-      default: "*.docx"
+      default: C:\AtomicRedTeam\atomics\T1002\T1002.yaml
     output_file:
       description: Path where resulting compressed data should be placed
       type: Path
-      default: exfilthis.rar
+      default: C:\exfilthis.rar
   executor:
     name: command_prompt
     command: |
-      rar a -r #{output_file} #{input_file}
+      C:\Program Files\WinRAR\Rar.exe a -r #{output_file} #{input_file}
 
 - name: Data Compressed - nix - zip
   uuid: 3d598550-c2a0-4d3d-bdde-70ae9747900a
