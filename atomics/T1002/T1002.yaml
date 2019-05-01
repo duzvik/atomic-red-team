@@ -22,7 +22,7 @@ atomic_tests:
   executor:
     name: powershell
     command: |
-      dir #{input_file} -Recurse | Compress-Archive -DestinationPath #{output_file}
+      dir #{input_file} -Recurse | Compress-Archive -DestinationPath #{output_file} -Update
 
 - name: Compress Data for Exfiltration With Rar
   uuid: b6722eb5-ebf4-420d-a6d5-8d3e2a220a1d
