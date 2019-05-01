@@ -62,7 +62,7 @@ atomic_tests:
       type: Path
       default: C:\exfilthis.7z
   executor:
-    name: command_prompt
+    name: powershell
     command: |
       & 'C:\Program Files\7-Zip\7z.exe' a -t7z #{output_file} #{input_file}
 
