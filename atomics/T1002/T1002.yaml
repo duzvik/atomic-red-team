@@ -45,6 +45,28 @@ atomic_tests:
     command: |
       C:\Program Files\WinRAR\Rar.exe a -r #{output_file} #{input_file}
 
+- name: Compress Data for Exfiltration With 7Zip
+  uuid: 19a640e6-f62f-47d7-bdb9-897896ed78d0
+
+  description: |
+    An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration
+  supported_platforms:
+    - windows
+  input_arguments:
+    input_file:
+      description: Path that should be compressed into our output file
+      type: Path
+      default: C:\AtomicRedTeam\atomics\T1002\T1002.yaml
+    output_file:
+      description: Path where resulting compressed data should be placed
+      type: Path
+      default: C:\exfilthis.7z
+  executor:
+    name: command_prompt
+    command: |
+      C:\Program Files\7-Zip\7z.exe a -t7z #{output_file} #{input_file}
+
+
 - name: Data Compressed - nix - zip
   uuid: 3d598550-c2a0-4d3d-bdde-70ae9747900a
 
