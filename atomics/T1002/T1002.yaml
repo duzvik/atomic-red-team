@@ -43,7 +43,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      C:\Program Files\WinRAR\Rar.exe a -r #{output_file} #{input_file}
+      C:\Program^ Files\WinRAR\Rar.exe a -r #{output_file} #{input_file}
 
 - name: Compress Data for Exfiltration With 7Zip
   uuid: 19a640e6-f62f-47d7-bdb9-897896ed78d0
@@ -64,7 +64,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
-      C:\Program Files\7-Zip\7z.exe a -t7z #{output_file} #{input_file}
+      C:\Program^ Files\7-Zip\7z.exe a -t7z #{output_file} #{input_file}
 
 
 - name: Data Compressed - nix - zip
