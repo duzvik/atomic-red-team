@@ -20,11 +20,11 @@ atomic_tests:
     process_id:
       description: PID of input_arguments
       type: Int
-      default: $pid
+      default: 1
   executor:
     name: powershell
     command: |
-      mavinject $pid /INJECTRUNNING #{dll_payload}
+      mavinject 1 /INJECTRUNNING #{dll_payload}
 
 - name: Process Injection via PowerSploit
   uuid: d8641c74-6dec-4f44-8643-9c9ca2904dd8
@@ -39,15 +39,15 @@ atomic_tests:
     dll_payload:
       description: DLL to Inject
       type: Path
-      default: T1055.dll
+      default: C:\AtomicRedTeam\atomics\T1055\src\x64\T1055.dll
     process_id:
       description: PID of input_arguments
       type: Int
-      default: $pid
+      default: 1
   executor:
     name: powershell
     command: |
-      Invoke-DllInjection.ps1 -ProcessID #{process_id} -Dll #{dll_payload}
+      C:\AtomicRedTeam\atomics\T1055\src\Invoke-DllInjection.ps1 -ProcessID #{process_id} -Dll #{dll_payload}
 
 - name: Shared Library Injection via /etc/ld.so.preload
   uuid: 2a0b5b0e-b123-4baf-b0f3-11ecfae7cc44

