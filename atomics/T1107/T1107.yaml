@@ -72,7 +72,7 @@ atomic_tests:
     name: command_prompt
     command: |
       echo 'test' > #{file_to_delete}
-      del /f #{file_to_delete}
+      del /f /Q #{file_to_delete}
 
 - name: Delete an entire folder - Windows cmd
   uuid: e6ab694c-471a-4413-9b60-777e5426d231
@@ -90,7 +90,7 @@ atomic_tests:
     name: command_prompt
     command: |
       mkdir C:\Windows\Temp\victim-files-folder
-      del /f /S #{folder_to_delete}
+      del /f /S /Q #{folder_to_delete}
 
 - name: Delete a single file - Windows PowerShell
   uuid: e48ae3a1-d887-4aa5-a57f-02f408c85d9e
