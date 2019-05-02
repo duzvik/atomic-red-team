@@ -128,9 +128,7 @@ atomic_tests:
       fltmc.exe unload #{sysmon_driver}
       #rollback
       C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
-      & 'C:\Program Files (x86)\Simplerity\SimplerityMon\SimplerityMon.exe' -u
-      & 'C:\Program Files (x86)\Simplerity\SimplerityMon\SimplerityMon.exe' -i 'C:\Program Files (x86)\Simplerity\SimplerityMon\sysconfig.xml'
-      Restart-Service Winlogbeat
+      C:\AtomicRedTeam\tools\install_sysmon.ps1
 - name: Disable Windows IIS HTTP Logging
   uuid: 31aeec43-c659-4369-9439-3764a276e957
 
