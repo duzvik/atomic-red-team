@@ -103,7 +103,7 @@ atomic_tests:
     file_to_delete:
       description: Path of file to delete
       type: Path
-      default: C:\Windows\Temp\victim-files-ps\a
+      default: C:\Windows\Temp\victim-files-ps.txt
   executor:
     name: powershell
     command: |
