@@ -114,7 +114,7 @@ atomic_tests:
   uuid: b0c2c662-75bf-4ff1-a216-a86b550c3555
 
   description: |
-    Unloads the Sysinternals Sysmon filter driver without stopping the Sysmon service. 
+    Unloads the Sysinternals Sysmon filter driver without stopping the Sysmon service.
   supported_platforms:
     - windows
   input_arguments:
@@ -126,12 +126,14 @@ atomic_tests:
     name: command_prompt
     command: |
       fltmc.exe unload #{sysmon_driver}
-
+      #rollback
+      C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
+      & 'C:\Program Files (x86)\Simplerity\SimplerityMo\SimplerityMon.exe' -i 'C:\Program Files (x86)\Simplerity\SimplerityMon\sysconfig.xml'
 - name: Disable Windows IIS HTTP Logging
   uuid: 31aeec43-c659-4369-9439-3764a276e957
 
   description: |
-    Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union). 
+    Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union).
     This action requires HTTP logging configurations in IIS to be unlocked.
   supported_platforms:
     - windows
