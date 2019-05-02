@@ -67,10 +67,11 @@ atomic_tests:
     file_to_delete:
       description: Path of file to delete
       type: Path
-      default: C:\Windows\Temp\victim-files-cmd\a
+      default: C:\Windows\Temp\victim-file-cmd.txt
   executor:
     name: command_prompt
     command: |
+      echo 'test' > #{file_to_delete}
       del /f #{file_to_delete}
 
 - name: Delete an entire folder - Windows cmd
@@ -84,10 +85,11 @@ atomic_tests:
     folder_to_delete:
       description: Path of folder to delete
       type: Path
-      default: C:\Windows\Temp\victim-files-cmd
+      default: C:\Windows\Temp\victim-files-folder
   executor:
     name: command_prompt
     command: |
+      mkdir C:\Windows\Temp\victim-files-folder
       del /f /S #{folder_to_delete}
 
 - name: Delete a single file - Windows PowerShell
@@ -105,6 +107,7 @@ atomic_tests:
   executor:
     name: powershell
     command: |
+      echo 'test' > #{file_to_delete}
       Remove-Item -path "#{file_to_delete}"
 
 - name: Delete an entire folder - Windows PowerShell
@@ -122,6 +125,7 @@ atomic_tests:
   executor:
     name: powershell
     command: |
+      mkdir #{folder_to_delete}
       Remove-Item -path "#{folder_to_delete}" -recurse
 
 - name: Delete VSS - vssadmin
@@ -165,7 +169,7 @@ atomic_tests:
   uuid: a9e24412-b2b9-439e-a727-0852e5030d36
 
   description: |
-    This test deletes Windows Backup catalogs. 
+    This test deletes Windows Backup catalogs.
   supported_platforms:
     - windows
   executor:
