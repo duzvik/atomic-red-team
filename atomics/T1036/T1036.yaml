@@ -16,7 +16,7 @@ atomic_tests:
     name: command_prompt
     command: |
       cmd.exe /c copy %SystemRoot%\System32\cmd.exe %SystemRoot%\Temp\lsass.exe
-      cmd.exe /c %SystemRoot%\Temp\lsass.exe
+      & cmd.exe /c %SystemRoot%\Temp\lsass.exe
 
 - name: Masquerading as Linux crond process.
   uuid: 1210c370-3d80-49e5-8691-2ac3b5e8fd82
