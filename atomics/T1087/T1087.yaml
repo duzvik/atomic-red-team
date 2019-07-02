@@ -1,123 +1,8 @@
---- 
+---
 attack_technique: T1087
-display_name: Account Discovery 
+display_name: Account Discovery
 
 atomic_tests:
-- name: Enumerate all accounts
-  uuid: 821f76e1-c69e-48fc-9c39-6da2e946a558
-
-  description: |
-    Enumerate all accounts by copying /etc/passwd to another file
-  supported_platforms:
-    - linux
-    - macos
-  input_arguments:
-    output_file:
-      description: Path where captured results will be placed
-      type: Path
-      default: ~/loot.txt
-  executor:
-    name: sh
-    command: |
-      cat /etc/passwd > #{output_file}
-
-- name: View sudoers access
-  uuid: 6dcd1ca1-5632-48d9-aed5-cad18e791398
-
-  description: |
-    xxx (requires root)
-  supported_platforms:
-    - linux
-    - macos
-  input_arguments:
-    output_file:
-      description: Path where captured results will be placed
-      type: Path
-      default: ~/loot.txt
-  executor:
-    name: sh
-    command: |
-      cat /etc/sudoers > #{output_file}
-
-- name: View accounts with UID 0
-  uuid: f61294f9-601e-4dcc-88bd-2bdb217658e3
-
-  description: |
-    View accounts wtih UID 0
-  supported_platforms:
-    - linux
-    - macos
-  input_arguments:
-    output_file:
-      description: Path where captured results will be placed
-      type: Path
-      default: ~/loot.txt
-  executor:
-    name: sh
-    command: |
-      grep 'x:0:' /etc/passwd > #{output_file} - name: List opened files by user
-  uuid: c697d061-ad91-4030-ab98-fc419214e606
-
-  description: |
-    List opened files by user
-  supported_platforms:
-    - linux
-    - macos
-  executor:
-    name: sh
-    command: |
-      username=$(echo $HOME | awk -F'/' '{print $3}') && lsof -u $username
-
-- name: Show if a user account has ever logger in remotely
-  uuid: ef9df306-6795-47d3-a654-c55000b1fdcd
-
-  description: |
-    Show if a user account has ever logger in remotely
-  supported_platforms:
-    - linux
-    - macos
-  input_arguments:
-    output_file:
-      description: Path where captured results will be placed
-      type: Path
-      default: ~/loot.txt
-  executor:
-    name: sh
-    command: |
-      lastlog > #{output_file}
-
-- name: Enumerate users and groups
-  uuid: 7f20cd36-d849-4099-9efe-6d7745183aaa
-
-  description: |
-    Utilize groups and id to enumerate users and groups
-  supported_platforms:
-    - linux
-    - macos
-
-  executor:
-    name: sh
-    command: |
-      groups
-      id
-
-- name: Enumerate users and groups
-  uuid: 3f6e1aab-a597-4f05-a43f-2db385138764
-
-  description: |
-    Utilize local utilities to enumerate users and groups
-  supported_platforms:
-    - macos
-
-  executor:
-    name: sh
-    command: |
-      dscl . list /Groups
-      dscl . list /Users
-      dscl . list /Users | grep -v '_'
-      dscacheutil -q group
-      dscacheutil -q user
-
 - name: Enumerate all accounts
   uuid: de642ecf-c1bb-4fdd-82c0-f4c90aa39ded
 
@@ -130,9 +15,14 @@ atomic_tests:
     command: |
       net user
       net user /domain
-      dir c:\Users\
+      get-localuser
+      get-localgroupmembers -group Users
       cmdkey.exe /list
-      net localgroup "Users"
+      ls C:/Users
+      get-childitem C:\Users\
+      dir C:\Users\
+      get-aduser -filter *
+      get-localgroup
       net localgroup
 
 - name: Enumerate all accounts via PowerShell
