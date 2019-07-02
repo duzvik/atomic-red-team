@@ -26,3 +26,37 @@ atomic_tests:
     command: |
       ps >> #{output_file}
       ps aux >> #{output_file}
+
+- name: Process Discovery - tasklist
+  uuid: 5a6426b7-b159-425b-8d9f-2866acfb64a4
+
+  description: |
+    Process Discovery using  tasklist.exe 
+  supported_platforms:
+    - windows
+  executor:
+    name: command_prompt
+    command: |
+      tasklist.exe
+- name: Process Discovery - tasklist
+  uuid: 5a6426b7-b159-425b-8d9f-2866acfb64a4
+
+  description: |
+    Process Discovery using  tasklist.exe 
+  supported_platforms:
+    - windows
+  executor:
+    name: command_prompt
+    command: |
+      tasklist.exe
+- name: Process Discovery - Get-Process
+  uuid: 5a6426b7-b159-425b-8d9f-2866acfb64a4
+
+  description: |
+    Process Discovery using  tasklist.exe 
+  supported_platforms:
+    - windows
+  executor:
+    name: powershell
+    command: |
+      Get-Process
