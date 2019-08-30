@@ -8,11 +8,11 @@ Get started with our simple Install script:
 
 `powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psInstall.AtomicRedTeam.com')"`
 
-[Source](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1)
+[Source](install-atomicredteam.ps1)
 
 By default, it will download and Install Atomic Red Team to `c:\AtomicRedTeam`
 
-Running the [Install script](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1) locally provides three parameters:
+Running the [Install script](install-atomicredteam.ps1) locally provides three parameters:
 
 InstallPath
 - Where ART is to be Installed
@@ -62,12 +62,22 @@ Specify a path to atomics folder, example C:\AtomicRedTeam\atomics
 
     Invoke-AllAtomicTests -path C:\AtomicRedTeam\atomics
 
-
-#### Execute a Single Test
+#### Execute All Attacks for a Given TTP
 
 ```powershell
-$T1117 = Get-AtomicTechnique -Path ..\..\atomics\T1117\T1117.yaml
-Invoke-AtomicTest $T1117
+Invoke-AtomicTest T1117
+```
+
+#### Execute Specific Attacks (by Attack Number) for a Given TTP
+
+```powershell
+Invoke-AtomicTest T1117 -TestNumbers 1, 2
+```
+
+#### Execute Specific Attacks (by Attack Name) for a Given TTP
+
+```powershell
+Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
 ```
 
 ## Additional Examples
@@ -77,19 +87,19 @@ If you would like output when running tests using the following:
 #### Informational Stream
 
 ```powershell
-Invoke-AtomicTest $T1117 -InformationAction Continue
+Invoke-AtomicTest T1117 -InformationAction Continue
 ```
 
 #### Verbose Stream
 
 ```powershell
-Invoke-AtomicTest $T1117 -Verbose
+Invoke-AtomicTest T1117 -Verbose
 ```
 
 #### Debug Stream
 
 ```powershell
-Invoke-AtomicTest $T1117 -Debug
+Invoke-AtomicTest T1117 -Debug
 ```
 
 #### WhatIf
@@ -97,7 +107,7 @@ Invoke-AtomicTest $T1117 -Debug
 If you would like to see what would happen without running the test
 
 ```powershell
-Invoke-AtomicTest $T1117 -WhatIf
+Invoke-AtomicTest T1117 -WhatIf
 ```
 
 #### Confirm
@@ -105,12 +115,12 @@ Invoke-AtomicTest $T1117 -WhatIf
 To run all tests without confirming them run using the Confirm switch to false
 
 ```powershell
-Invoke-AtomicTest $T1117 -Confirm:$false
+Invoke-AtomicTest T1117 -Confirm:$false
 ```
 
 Or you can set your `$ConfirmPreference` to 'Medium'
 
 ```powershell
 $ConfirmPreference = 'Medium'
-Invoke-AtomicTest $T1117
+Invoke-AtomicTest T1117
 ```

