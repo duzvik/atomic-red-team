@@ -161,7 +161,7 @@ function Invoke-AtomicTest {
                             "powershell" {
                                 Write-Verbose -Message "PowerShell:`n $finalCommand"
                                 Write-Information -MessageData "PowerShell`n $finalCommand" -Tags 'AtomicTest'
-                                Start-Process -FilePath calc.exe -ArgumentList start-uuid=$test_uuid
+                                Start-Process -FilePath cmd.exe -ArgumentList '/c echo start-uuid=$test_uuid'
                                 $execCommand = "Invoke-Command -ScriptBlock {$finalCommand}"
                                 Invoke-Expression $execCommand
                                 continue
@@ -173,7 +173,7 @@ function Invoke-AtomicTest {
                         } # End of executor switch
                     } # End of if ShouldProcess block
                     Start-Sleep -Seconds 5
-                    Start-Process -FilePath calc.exe -ArgumentList stop-uuid=$test_uuid
+                    Start-Process -FilePath cmd.exe -ArgumentList '/c echo stop-uuid=$test_uuid'
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
 
