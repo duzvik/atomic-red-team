@@ -13,7 +13,7 @@ Install-Module -Name powershell-yaml -Force
 
 
 
-$techniques = @("T1003", "T1086",  "T1059", "T1060", "T1105", "T1002", "T1053", "T1107", "T1057", "T1016", "T1083", "T1082", "T1036", "T1076", "T1074", "T1033", "T1018", "T1140", "T1087", "T1047", "T1102", "T1049"),
+$techniques = @("T1003", "T1086",  "T1059", "T1060", "T1105", "T1002", "T1053", "T1107", "T1057", "T1016", "T1083", "T1082", "T1036", "T1076", "T1074", "T1033", "T1018", "T1140", "T1087", "T1047", "T1102", "T1049")
 Import-Module C:\AtomicRedTeam\execution-frameworks\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam.psm1  -Force
 Foreach ($t in $techniques) {
     Write-Host "Executing $t technique" -fore green
