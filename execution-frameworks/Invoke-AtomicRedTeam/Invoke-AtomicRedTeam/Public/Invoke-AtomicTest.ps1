@@ -175,7 +175,7 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
-                    Start-Sleep -Seconds 10
+                    Start-Sleep -Seconds 15
                     Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
                     #cleanup
                     # Start-Process -FilePath taskkill -ArgumentList '/F /IM calc.exe'
