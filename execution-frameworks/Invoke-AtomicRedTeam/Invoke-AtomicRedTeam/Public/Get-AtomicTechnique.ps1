@@ -32,7 +32,10 @@ function Get-AtomicTechnique {
     {
 
         Write-Verbose -Message 'Attempting to convert files from yaml'
+        Write-Verbose -Message "path: $Path"
         foreach ($file in $Path) {
+            Write-Verbose -Message "file: $file"
+
             if ($pscmdlet.ShouldProcess($file, 'Converting yaml file')) {
                 Write-Verbose -Message "Converting $file from Yaml"
                 $parsedYaml = ConvertFrom-Yaml (Get-Content $file -Raw)

@@ -13,16 +13,22 @@ atomic_tests:
     - windows
 
   input_arguments:
-    executable:
+    executable_in:
       description: name of executable
       type: path
-      default: c:\file.exe
+      default: C:\Windows\System32\calc.exe
+    executable_out:
+      description: name of executable
+      type: path
+      default: C:\Windows\Temp\calc.exe
 
   executor:
     name: command_prompt
     command: |
-      certutil.exe -encode #{executable} file.txt
-      certutil.exe -decode file.txt #{executable}
+      del #{executable_out}
+      del file.txt
+      certutil.exe -encode #{executable_in} file.txt
+      certutil.exe -decode file.txt #{executable_out}
 
 - name: Certutil Rename and Decode
   uuid: 15121ec6-1f27-4169-ace5-3a65d87d27dd
@@ -37,10 +43,10 @@ atomic_tests:
     executable:
       description: name of executable/file to decode
       type: path
-      default: c:\file.exe
+      default: C:\Windows\System32\calc.exe
 
   executor:
     name: command_prompt
     command: |
       cmd.exe /c copy %windir%\\system32\\certutil.exe %temp%tcm.tmp
-      cmd.exe /c %temp%tcm.tmp -decode #{executable} file.txt
+      cmd.exe /c %temp%tcm.tmp -decode file.txt calc.exe
