@@ -62,6 +62,9 @@ function Invoke-AtomicTest {
         #return
         $AtomicTechniqueHash = Get-AtomicTechnique -Path $PathToAtomicsFolder\$AtomicTechnique\$AtomicTechnique.yaml
         $techniqueCount = 0
+        Start-Sleep -Seconds 5
+        Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
+
         foreach ($technique in $AtomicTechniqueHash) {
 
             $techniqueCount++
@@ -149,8 +152,8 @@ function Invoke-AtomicTest {
                     #Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
                     #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
                     #Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
-                    #Start-Sleep -Seconds 5
-                    Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
+                    # #Start-Sleep -Seconds 5
+                    # Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
 
                     Write-Verbose -Message 'Invoking Atomic Tests using defined executor'
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
@@ -175,8 +178,8 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
-                    Start-Sleep -Seconds 15
-                    Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
+                    # Start-Sleep -Seconds 15
+                    # Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
                     #cleanup
                     # Start-Process -FilePath taskkill -ArgumentList '/F /IM calc.exe'
                     # Start-Process -FilePath taskkill -ArgumentList '/F /IM hh.exe'
@@ -184,6 +187,8 @@ function Invoke-AtomicTest {
 
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
+            Start-Sleep -Seconds 15
+            Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
 
             Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
 
