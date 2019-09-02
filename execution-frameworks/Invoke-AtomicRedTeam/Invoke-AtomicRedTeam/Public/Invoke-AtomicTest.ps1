@@ -175,12 +175,12 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
-                    Start-Sleep -Seconds 5
+                    Start-Sleep -Seconds 10
                     Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
                     #cleanup
-                    Start-Process -FilePath taskkill -ArgumentList '/F /IM calc.exe'
-                    Start-Process -FilePath taskkill -ArgumentList '/F /IM hh.exe'
-                    Start-Process -FilePath taskkill -ArgumentList '/F /IM cmd.exe'
+                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM calc.exe'
+                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM hh.exe'
+                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM cmd.exe'
 
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
