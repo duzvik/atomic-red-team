@@ -3,12 +3,23 @@
 choco install GoogleChrome -y --ignore-checksums
 choco install git -y
 choco install 7zip.install
+choco install procdump
 cmd.exe /c "C:\Program Files\Git\bin\git.exe" clone https://github.com/duzvik/atomic-red-team.git C:\AtomicRedTeam
 write-verbose "Installing NuGet PackageProvider"
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 
 write-verbose "Installing powershell-yaml"
 Install-Module -Name powershell-yaml -Force
+
+.\demo.ps1 *>&1 | Out-File C:\demo.log -Append
+
+
+Get-Content -Path "C:\scripts\test.txt" -Wait
+update winlogbeat
+queue.mem:
+  flush.min_events: 0
+  flush.timeout: 0s
+
 #>
 
 
