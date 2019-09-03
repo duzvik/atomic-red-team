@@ -62,7 +62,8 @@ function Invoke-AtomicTest {
         #return
         $AtomicTechniqueHash = Get-AtomicTechnique -Path $PathToAtomicsFolder\$AtomicTechnique\$AtomicTechnique.yaml
         $techniqueCount = 0
-        Start-Sleep -Seconds 5
+        #Start-Sleep -Seconds 5
+        $proc = Start-Process -FilePath 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.exe' -WorkingDirectory 'C:\Program Files (x86)\Simplerity\Winlogbeat\' -ArgumentList '-e' -PassThru -RedirectStandardError 'C:\err.log' -RedirectStandardOutput 'c:\out.log' 
         Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
 
         foreach ($technique in $AtomicTechniqueHash) {
@@ -187,8 +188,10 @@ function Invoke-AtomicTest {
 
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
-            Start-Sleep -Seconds 30
             Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
+
+            Start-Sleep -Seconds 10
+            Stop-Process $proc.Id
 
             Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
 
