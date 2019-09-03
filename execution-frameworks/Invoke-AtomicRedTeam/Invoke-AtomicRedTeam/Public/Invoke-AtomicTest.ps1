@@ -187,7 +187,7 @@ function Invoke-AtomicTest {
 
                 } # End of else statement
             } # End of foreach Test in single Atomic Technique
-            Start-Sleep -Seconds 15
+            Start-Sleep -Seconds 30
             Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
 
             Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
