@@ -187,15 +187,17 @@ function Invoke-AtomicTest {
                     # Start-Process -FilePath taskkill -ArgumentList '/F /IM cmd.exe'
 
                 } # End of else statement
-            } # End of foreach Test in single Atomic Technique
-            Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
-
-            Start-Sleep -Seconds 10
-            Stop-Process $proc.Id
-
+            } # End of foreach Test in single Atomic Technique            
             Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
 
         } # End of foreach Technique in Atomic Tests
+        Write-Verbose "Stop winlogbeat "
+        Write-Verbose $proc.Id
+        Start-Sleep -Seconds 10
+        Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
+        Start-Sleep -Seconds 10
+        Stop-Process $proc.Id
+
     } # End of PROCESS block
     END { } # Intentionally left blank and can be removed
 }
