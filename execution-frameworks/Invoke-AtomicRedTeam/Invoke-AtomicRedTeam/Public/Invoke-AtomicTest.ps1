@@ -57,17 +57,13 @@ function Invoke-AtomicTest {
     BEGIN { } # Intentionally left blank and can be removed
     PROCESS {
         Write-Verbose -Message 'Attempting to run Atomic Techniques'
-        Write-Verbose -Message "Tarcking UUID is $Uuid"
         #Write-Verbose -Message "T is $AtomicTechnique"
         #return
         $AtomicTechniqueHash = Get-AtomicTechnique -Path $PathToAtomicsFolder\$AtomicTechnique\$AtomicTechnique.yaml
         $techniqueCount = 0
         #Start-Sleep -Seconds 5
-        $proc = Start-Process -FilePath 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.exe' -WorkingDirectory 'C:\Program Files (x86)\Simplerity\Winlogbeat\' -ArgumentList '-e' -PassThru -RedirectStandardError 'C:\err.log' -RedirectStandardOutput 'c:\out.log' 
-        Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
 
         foreach ($technique in $AtomicTechniqueHash) {
-
             $techniqueCount++
 
             $props = @{
@@ -78,6 +74,7 @@ function Invoke-AtomicTest {
             Write-Progress @props
 
             Write-Debug -Message "Gathering tests for Technique $technique"
+
 
             $testCount = 0
             foreach ($test in $technique.atomic_tests) {
@@ -111,9 +108,16 @@ function Invoke-AtomicTest {
                     Write-Verbose -Message 'Unable to run manual tests'
                     continue
                 }
-
+                $test_name = $test.name.ToString() -replace '[\s+]', '-'
+                $test_name = $test_name -replace '[^a-zA-Z0-9\-]', ''
+                $Uuid = "$($technique.attack_technique)_$test_name"
+                #Write-Verbose -Message $test.name.ToString()
+                Write-Verbose -Message "Tarcking UUID is $Uuid"
+                $proc = Start-Process -FilePath 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.exe' -WorkingDirectory 'C:\Program Files (x86)\Simplerity\Winlogbeat\' -ArgumentList '-e' -PassThru -RedirectStandardError 'C:\err.log' -RedirectStandardOutput 'c:\out.log'
+                Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
+                Write-Verbose -Message "Winlogbeat id $($proc.id)"
                 Write-Information -MessageData ("[********BEGIN TEST*******]`n" +
-                    $technique.display_name.ToString(), $technique.attack_technique.ToString()) -Tags 'Details'
+                $technique.display_name.ToString(), $technique.attack_technique.ToString()) -Tags 'Details'
 
                 Write-Information -MessageData $test.name.ToString() -Tags 'Details'
                 Write-Information -MessageData $test.description.ToString() -Tags 'Details'
@@ -187,17 +191,14 @@ function Invoke-AtomicTest {
                     # Start-Process -FilePath taskkill -ArgumentList '/F /IM cmd.exe'
 
                 } # End of else statement
-            } # End of foreach Test in single Atomic Technique            
-            Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
+                Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
+                Start-Sleep -Seconds 10
+                Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
+                Start-Sleep -Seconds 10
+                Stop-Process $proc.Id
+            } # End of foreach Test in single Atomic Technique
 
         } # End of foreach Technique in Atomic Tests
-        Write-Verbose "Stop winlogbeat "
-        Write-Verbose $proc.Id
-        Start-Sleep -Seconds 10
-        Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
-        Start-Sleep -Seconds 10
-        Stop-Process $proc.Id
-
     } # End of PROCESS block
     END { } # Intentionally left blank and can be removed
 }

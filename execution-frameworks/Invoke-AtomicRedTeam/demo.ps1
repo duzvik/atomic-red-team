@@ -29,7 +29,7 @@ $techniques = @("T1003", "T1086",  "T1059", "T1060", "T1105", "T1002", "T1053", 
 Import-Module C:\AtomicRedTeam\execution-frameworks\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam.psm1  -Force
 Foreach ($t in $techniques) {
     Write-Host "Executing $t technique" -fore green
-    Invoke-AtomicTest $t -Uuid $t"_atomictest" -PathToAtomicsFolder C:\AtomicRedTeam\atomics -Verbose
+    Invoke-AtomicTest $t -PathToAtomicsFolder C:\AtomicRedTeam\atomics -Verbose
     #Write-Host "C:\atomic-red-team\atomics\$t\$t.yaml"
     #$tObj= Get-AtomicTechnique -Path "C:\atomic-red-team\atomics\$t\$t.yaml"
     #Invoke-AtomicTest $tObj -Verbose
