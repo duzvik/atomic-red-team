@@ -111,11 +111,10 @@ function Invoke-AtomicTest {
                 $test_name = $test.name.ToString() -replace '[\s+]', '-'
                 $test_name = $test_name -replace '[^a-zA-Z0-9\-]', ''
                 $Uuid = "$($technique.attack_technique)_$test_name"
-                #Write-Verbose -Message $test.name.ToString()
                 Write-Verbose -Message "Tarcking UUID is $Uuid"
-                $proc = Start-Process -FilePath 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.exe' -WorkingDirectory 'C:\Program Files (x86)\Simplerity\Winlogbeat\' -ArgumentList '-e' -PassThru -RedirectStandardError 'C:\err.log' -RedirectStandardOutput 'c:\out.log'
-                Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
-                Write-Verbose -Message "Winlogbeat id $($proc.id)"
+                #$proc = Start-Process -FilePath 'C:\Program Files (x86)\Simplerity\Winlogbeat\winlogbeat.exe' -WorkingDirectory 'C:\Program Files (x86)\Simplerity\Winlogbeat\' -ArgumentList '-e' -PassThru -RedirectStandardError 'C:\err.log' -RedirectStandardOutput 'c:\out.log'
+                #Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
+                #Write-Verbose -Message "Winlogbeat id $($proc.id)"
                 Write-Information -MessageData ("[********BEGIN TEST*******]`n" +
                 $technique.display_name.ToString(), $technique.attack_technique.ToString()) -Tags 'Details'
 
@@ -147,19 +146,6 @@ function Invoke-AtomicTest {
                     #$test_uuid = $test.uuid
                     $test_name = $test.name
 
-                    #if ($Uuid -and ($Uuid -ne $test_uuid)) {
-                      #  continue
-                    #}
-                    #if ($Uuid) {
-                    #    $test_uuid = $Uuid
-                    #}
-
-                    #Write-Verbose -Message "Set Winlogbeat Meta field $test_technique $test_uuid $test_name"
-                    #Set-WinlogbeatMeta  -Name $test_technique -UUID $test_uuid -Rule $test_name -Verbose
-                    #Set-SysmonLabel -uuid $test_uuid -path "C:\AtomicRedTeam\tools\sysmon.xml" -Verbose
-                    # #Start-Sleep -Seconds 5
-                    # Start-Process -FilePath cmd.exe -ArgumentList "/c echo start-uuid=$Uuid"
-
                     Write-Verbose -Message 'Invoking Atomic Tests using defined executor'
                     if ($pscmdlet.ShouldProcess(($test.name.ToString()), 'Execute Atomic Test')) {
                         switch ($test.executor.name) {
@@ -183,19 +169,12 @@ function Invoke-AtomicTest {
                             }
                         } # End of executor switch
                     } # End of if ShouldProcess block
-                    # Start-Sleep -Seconds 15
-                    # Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
-                    #cleanup
-                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM calc.exe'
-                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM hh.exe'
-                    # Start-Process -FilePath taskkill -ArgumentList '/F /IM cmd.exe'
-
                 } # End of else statement
                 Write-Information -MessageData "[!!!!!!!!END TEST!!!!!!!]`n`n" -Tags 'Details'
-                Start-Sleep -Seconds 10
-                Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
-                Start-Sleep -Seconds 10
-                Stop-Process $proc.Id
+                #Start-Sleep -Seconds 10
+                #Start-Process -FilePath cmd.exe -ArgumentList "/c echo stop-uuid=$Uuid"
+                #Start-Sleep -Seconds 10
+                #Stop-Process $proc.Id
             } # End of foreach Test in single Atomic Technique
 
         } # End of foreach Technique in Atomic Tests
