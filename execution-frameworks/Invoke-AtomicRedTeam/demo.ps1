@@ -15,7 +15,8 @@ Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 write-verbose "Installing powershell-yaml"
 Install-Module -Name powershell-yaml -Force
 
-.\demo.ps1 *>&1 | Out-File C:\demo.log -encoding ASCII -Append
+ cd C:\AtomicRedTeam\execution-frameworks\Invoke-AtomicRedTeam
+ .\demo.ps1 *>&1 | Out-File C:\demo.log -encoding ASCII -Append
 
 
 Get-Content -Path "C:\scripts\test.txt" -Wait
